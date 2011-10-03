@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Node.js: The parts you haven't seen on HackerNews (mostly)</title>
+	
+	<meta name="description" content="My slides for FirstRound Capital CTO Summit 2011">
+	<meta name="author" content="Charlie Robbins">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="deckjs/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="deckjs/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/themes/elegant.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+  
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="./css/horizontal-slide.css">
+	<link rel="stylesheet" href="./css/slides.css">
+	
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+  
+<div class="slide" id="title-slide">
+	<h1>Node.js</h1>
+	<ul>
+  	<li class="slide" id="title-subheader">
+  		<strong>The parts you haven't seen on HackerNews</strong>
+  		<strong>(mostly)</strong>
+  	</li>
+	</ul>
+</div>
+
+<div class="slide" id="whoami">
+	<h2>require('whoami');</h2>
+	<ul>
+		<li class="slide" id="whoami-nodejitsu">
+			<h3>Co-Founder / CEO of Nodejitsu.</h3>
+			<img src="img/header-logo-grey.png" style="float:left" />
+			<img src="img/header-logotype.png" style="float:left;padding-top:50px" />
+		</li>
+		<li class="slide" id="whoami-node" style="float:clear">
+			<h3>Involved with Node.js since v0.1.25.</h3>
+			<p>~January 2010</p>
+		</li>
+		<li class="slide" id="whoami-oss">
+		  <h3>If you use Node.js, you probably use a library I wrote or maintain.</h3>
+		  <pre><code>npm install npmcount -g &amp;&amp; npmcount indexzero<br/>(...)<br/>info:   Total packages: 40<br/></code></pre>  
+		<li class="slide" id="whoami-nojs">
+			<h3>Didn't know Javascript before Node.js.</h3>
+		</li>
+	</ul>
+</div>
+
+<div class="slide" id="you-know">
+	<h2>require('you').know(this) === true;</h2>
+  <ul>
+		<li class="slide" id="you-know-js">
+			<h3>Node.js is server-side Javascript.</h3>
+		</li>
+		<li class="slide" id="you-know-io">
+			<h3>Node.js is asychronous evented I/O.</h3>
+		</li>
+		<li class="slide" id="you-know-size">
+		  <h3>Node.js is very light-weight.</h3>
+		<li class="slide" id="you-know-young">
+			<h3>Node.js is a young project (~2.5 years)</h3>
+		</li>
+	</ul>
+</div>
+
+<div class="slide" id="focus">
+  <h2>require('development-focus');</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="focus-speed">
+        <h3>Speed.</h3>
+      </li>
+      <li class="slide" id="focus-decoupled">
+        <h3>Decoupled kernels of functionality.</h3>
+      </li>
+      <li class="slide" id="focus-experimentation">
+        <h3>Experimentation.</h3>
+      </li>
+      <li class="slide" id="focus-isomorphism">
+        <h3>Client-Server Isomorphism.</h3>
+      </li>
+      <li class="slide" id="focus-community">
+        <h3>Community.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="where-is-it">
+  <h2>require('users').filter(notable);</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="where-is-it-yahoo">
+        <h3>Yahoo.</h3>
+      </li>
+      <li class="slide" id="where-is-it-github">
+        <h3>Github.</h3>
+      </li>
+      <li class="slide" id="where-is-it-linkedin">
+        <h3>LinkedIn.</h3>
+      </li>
+      <li class="slide" id="where-is-it-more">
+        <h3>...and more I can't say.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="innovation">
+  <h2>require('innovation');</h2>
+  <ul>
+    <li class="slide" id="innovation-socket-io">
+      <h3>socket.io <pre><code>http://github.com/learnboost/socket.io</code></pre></h3>
+      <p>Multi-transport (websocket, flash, xhr) full-duplex socket support backwards-compatible to IE6.</p>
+    </li>
+    <li class="slide" id="innovation-node-http-proxy">
+      <h3>node-http-proxy <pre><code>http://github.com/nodejitsu/node-http-proxy</code></pre></h3>
+      <p>RFC2616-compliant reverse proxy supporting SSL, websockets and vhosts. Competitive speed with 1/10th the code of squid, haproxy, or nginx.</p>
+    </li>
+    <li class="slide" id="innovation-browserify">
+      <h3>browserify <pre><code>http://github.com/substack/browserify</code></pre></h3>
+      <p>Seemless browser-side require() for raw JS and npm modules. (Dual-sided script loaders anyone?)</p>
+    </li>
+    <li class="slide" id="innovation-jsdom">
+      <h3>jsdom <pre><code>http://github.com/tmpvar/jsdom</code></pre></h3>   
+      <p>A pure Javascript implementation of the W3C DOM.</p>
+    </li>
+    <li class="slide" id="innovation-hookio">
+      <h3>hook.io <pre><code>http://github.com/hookio/hook.io</code></pre></h3>
+      <p>A universal event bus and process supervision tree with browser-support. Think: Erlang process model in Javascript at the application-level.</p>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="schema-org">
+  <h2>require('code-sample');</h2>
+  <img src="img/schema-org.png" />
+</div>
+
+<div class="slide" id="jsdom">
+  <h2>require('code-sample');</h2>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var jsdom = require('jsdom'),
+        request = require('request');
+        
+    request({ uri: url }, function (err, response, body) {
+      if (err && response.statusCode !== 200) {
+        console.log('Error when contacting: ' + url);
+        return callback(err);
+      }
+
+      //
+      // Parse the resulting HTML using jQuery
+      //
+      jsdom.env({
+        html: body,
+        scripts: [
+          'http://code.jquery.com/jquery-1.5.min.js'
+        ]
+      }, function (err, window) {
+        var $ = window.jQuery,
+            schema = { type: type };
+            
+        //
+        // Hardcore parsing logic is here:
+        // http://github.com/indexzero/node-schema-org
+        //
+      });
+    });
+  </div>  
+</div>
+
+<div class="slide" id="node-http-proxy">
+  <h2>require('code-sample');</h2>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    //
+    // https://gist.github.com/869781
+    //
+    var httpProxy = require('http-proxy');
+
+    //
+    // Addresses to use in the round robin proxy
+    //
+    var addresses = [
+      {
+        host: 'ws1.0.0.0',
+        port: 80
+      },
+      {
+        host: 'ws2.0.0.0',
+        port: 80
+      }
+    ];
+
+    httpProxy.createServer(function (req, res, proxy) {
+      //
+      // Get the first location off of the 'queue'.
+      //
+      var target = addresses.shift();
+
+      //
+      // Proxy to the specified location
+      //
+      proxy.proxyRequest(req, res, target);
+
+      //
+      // Push the location to the end of the 'queue'.
+      //
+      addresses.push(target);
+    });
+  </div>
+</div>
+
+<div class="slide" id="advantages">
+  <h2>require('advantages');</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="advantages-rules">
+        <h3>No pre-defined rules.</h3>
+      </li>
+      <li class="slide" id="advantages-libraries">
+        <h3>Tons of libraries.</h3>
+      </li>
+      <li class="slide" id="advantages-visibility">
+        <h3>High visibility.</h3>
+      </li>
+      <li class="slide" id="advantages-community">
+        <h3>Community.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="disadvantages">
+  <h2>require('disadvantages');</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="disadvantages-rules">
+        <h3>No pre-defined rules.</h3>
+      </li>
+      <li class="slide" id="disadvantages-libraries">
+        <h3>Tons of libraries.</h3>
+      </li>
+      <li class="slide" id="disadvantages-style">
+        <h3>Everyone has an opinion.</h3>
+      </li>
+      <li class="slide" id="disadvantages-userland">
+        <h3>User-land is still maturing.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="now-what">
+  <h2>require('now-what');</h2>
+  <p>You are probably wondering how to bring Node.js into your organization. Although Node.js is a new technology the approach to implementation and adoption stay relatively the same.</p> 
+  <h2>
+    <ul>
+      <li class="slide" id="now-what-service">
+        <h3>Just another web service.</h3>
+      </li>
+      <li class="slide" id="now-what-realtime">
+        <h3>Real-time enhancements?</h3>
+      </li>
+      <li class="slide" id="now-what-mobile">
+        <h3>Mobile?</h3>
+      </li>
+      <li class="slide" id="now-what-dirt">
+        <h3>Any DIRT lying around?</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="community">
+  <h2>require('community');</h2>
+  <ul>
+    <li>
+      <h3>IRC</h3>
+      <ul>
+        <li><h3>#node.js</h3></li>
+        <li><h3>#nodejitsu</h3></li>
+      </ul>
+    </li>
+    <li>
+      <h3>Google Groups</h3>
+      <ul>
+        <li><h3>nodejs</h3></li>
+        <li><h3>nodejs-dev</h3></li>
+      </ul>
+    </li>
+    <li>
+      <h3>Intertubes</h3>
+      <ul>
+        <li><h3>blog.nodejitsu.com</h3></li>
+        <li><h3>blog.nodejs.org</h3></li>
+        <li><h3>howtonode.org</h3></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="community-docs">
+  <h2>require('community');</h2>
+  <img src="img/docs.nodejitsu.com.png" height="800px"/>
+</div>
+
+<div class="slide" id="contribute">
+  <h2>require('contribute');</h2>
+  <img src="img/docs.nodejitsu.com-github.png" height="800px"/>
+</div>
+
+<div class="slide" id="questions">
+  <h1>require('questions').ask(Date.now);</h1>
+</div>
+
+<div class="slide" id="open-source">
+  <h2>require('open-source')</h2>
+  <p>This presentation is Open Source software.</p>
+  <ol>
+    <li>
+       All software is available under the MIT license. 
+    </li>
+    <li>
+      All content is available under Creative Commons Share-Alike no-attribution commercial ok.
+    </li>
+    <li>
+      Special thanks to Deck.js for making a killer open-source front-end: <a href="http://imakewebthings.github.com/deck.js">http://imakewebthings.github.com/deck.js</a>
+    </li>
+  <ol>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>-->
+<script src="js/jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="deckjs/core/deck.core.js"></script>
+<script src="deckjs/extensions/status/deck.status.js"></script>
+<script src="deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="deckjs/extensions/hash/deck.hash.js"></script>
+<script src="deckjs/extensions/codemirror/deck.codemirror.js"></script>
+
+<!-- Specific to this page -->
+<script type="text/javascript">
+  $(function() {
+  	$.deck('.slide');
+  });
+</script>
+
+</body>
+</html>
