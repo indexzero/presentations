@@ -1,0 +1,15 @@
+{
+  "name": "couchconf-nyc-2011",
+  "version": "0.0.0-1",
+  "author": "Charlie Robbins <charlie@nodejitsu.com>",
+  "subdomain": "couchconf-nyc-2011",
+  "dependencies": {
+    "http-server": "*",
+    "colors": "*",
+    "optimist": "*",
+    "wordwrap": "*"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/http-server"
+  }
+}

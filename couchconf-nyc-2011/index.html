@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Node.js: The parts you haven't seen on HackerNews (mostly)</title>
+	
+	<meta name="description" content="My slides for FirstRound Capital CTO Summit 2011">
+	<meta name="author" content="Charlie Robbins">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="deckjs/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="deckjs/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/themes/elegant.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+  
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="./css/horizontal-slide.css">
+	<link rel="stylesheet" href="./css/slides.css">
+	
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+  
+<div class="slide" id="title-slide">
+	<h1>CouchDB, package managers, and npm</h1>
+	<ul>
+  	<li class="slide" id="title-subheader">
+  		<h3>oh my!</h3>
+  	</li>
+	</ul>
+</div>
+
+<div class="slide" id="whoami">
+	<h2>Who Am I?</h2>
+	<ul>
+		<li class="slide" id="whoami-nodejitsu">
+			<h3>Co-Founder / CEO of Nodejitsu.</h3>
+			<img src="img/header-logo-grey.png" style="float:left" />
+			<img src="img/header-logotype.png" style="float:left;padding-top:50px" />
+		</li>
+		<li class="slide" id="whoami-node" style="float:clear">
+			<h3>CouchDB user since April 2010</h3>
+		</li>
+		<li class="slide" id="whoami-oss">
+		  <h3>Cradle maintainer.</h3>
+		  <pre><code>A high-level caching CouchDB client for Node.js</code></pre>
+		  <a href="http://github.com/cloudhead/cradle">http://github.com/cloudhead/cradle</a>
+		</li>
+	</ul>
+</div>
+
+<div class="slide" id="define">
+	<h2>Define: Package manager</h2>
+  <ul>
+    <li class="slide" id="define-describe"><pre><code>A collection of software tools to automate the process of installing, upgrading, configuring, and removing software packages for a computer's operating system in a consistent manner.</code></pre></li>
+    <li class="slide" id="define-database"><pre><code>It typically maintains a database of software dependencies and version information to prevent software mismatches and missing prerequisites.</code></pre></li>
+    <li class="slide" id="define-metadata"><pre><code>Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, metadata is stored in a local package database.</code></pre></li>
+  </ul>
+  <div class="sources">
+    <p>Sources: <a href="http://en.wikipedia.org/wiki/Package_management_system">[1]</a></p>
+  </div>
+</div>
+
+<div class="slide" id="a-survey-os">
+	<h2>Package manager ecosystem</h2>
+  <ul>
+		<li class="slide" id="a-survey-os-rpm">
+		  <h3>RPM Package Manager (rpm)</h3>
+		  <p>Originally the Red Hat Package Manager, now included in many GNU/Linux distributions.</p>
+		</li>
+		<li class="slide" id="a-survey-os-yum">
+		  <h3>Yellowdog Updater (yum)</h3>
+			<p>An RPM compatible CLI package manager with metadata managed through XML or SQLite.</p>
+		</li>
+		<li class="slide" id="a-survey-os-apt">
+			<h3>Advanced Packaging Tool (apt)</h3>
+			<p>Handles installation and removal of core libraries on Debian and other Linux Distributions</p>
+		</li>
+		<li class="slide" id="a-survey-os-dpkg">
+			<h3>Debian Package (dpkg)</h3>
+			<p>Base software for the Debian package management system used to install, remove, and provide information about .deb packages</p> 
+		</li>
+	</ul>
+	<div class="sources">
+  	<p>
+  	  Sources: 
+    	<a href="http://en.wikipedia.org/wiki/Yellow_dog_Updater,_Modified">[1]</a> 
+    	<a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">[2]</a> 
+    	<a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool">[3]</a> 
+    	<a href="http://en.wikipedia.org/wiki/Dpkg">[4]</a>
+  	</p>
+  </div>
+</div>
+
+<div class="slide" id="a-survey-language">
+	<h2>Package manager ecosystem</h2>
+  <ul>
+		<li><h3>RubyGems</h3></li>
+		<li><h3>Pip</h3></li>
+		<li><h3>Pear</h3></li>
+		<li><h3>NuGet</h3></li>
+	</ul>
+	<br/><br/><br/><br/><br/>
+	<div class="sources">
+	  <p>
+	    Sources: 
+	    <a href="http://guides.rubygems.org/">[1]</a>
+	    <a href="http://www.pip-installer.org/en/latest/index.html">[2]</a>
+	    <a href="http://nuget.codeplex.com/">[3]</a>
+	    <a href="http://pear.php.net/">[4]</a>
+	    <a href="http://npmjs.org/">[5]</a>
+	  </p>
+	</div>
+</div>
+
+<div class="slide" id="rubygems">
+  <h2>Ruby Gems</h2>
+  <p><img src="img/ruby-gems.png"/>Package manager for the Ruby language. Gemspec files are actual Ruby code.</p>
+  <div class="sources"><a href="http://rubygems.org">http://rubygems.org</a></div><br/><br/>
+  
+  <div id="code" name="code" class="code" mode="ruby" theme="elegant" style="display: none;">
+    version = File.read(File.expand_path("../RAILS_VERSION",__FILE__)).strip
+
+    Gem::Specification.new do |s|
+      s.platform    = Gem::Platform::RUBY
+      s.name        = 'rails'
+      s.version     = version
+      s.summary     = 'Full-stack web application framework.'
+      s.description = 'Ruby on Rails is a full-stack web framework optimized ...'
+
+      s.required_ruby_version     = '>= 1.8.7'
+      s.required_rubygems_version = ">= 1.3.6"
+      
+      # ....
+    end
+  </div>
+</div>
+
+<div class="slide" id="pip">
+  <h2>Pip</h2>
+  <p>pip is a tool for installing and managing Python packages, such as those found in the Python Package Index. It’s a replacement for easy_install.</p>
+  <div class="sources"><a href="http://www.pip-installer.org/">http://www.pip-installer.org/</a></div><br/><br/>
+  
+  <div id="code" name="code" class="code" mode="xml" theme="elegant" style="display: none;">
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <rdf:RDF xmlns="http://usefulinc.com/ns/doap#">
+    <Project>
+      <name>Django</name>
+      <shortdesc>
+        A high-level Python Web framework that encourages rapid ...
+      </shortdesc>
+      <download-page>
+        http://media.djangoproject.com/releases/1.3/Django-1.3.1.tar.gz
+      </download-page>
+      <homepage rdf:resource="http://www.djangoproject.com/" />
+      <maintainer>
+        <foaf:Person>
+          <foaf:name>Django Software Foundation</foaf:name>
+          <foaf:mbox_sha1sum>
+          ee5b4855c56f54f5d74d51b7bafd566d56165210
+          </foaf:mbox_sha1sum>
+        </foaf:Person>
+      </maintainer>
+      <release>
+        <Version><revision>1.3.1</revision></Version>
+        </release>
+    </Project>
+    </rdf:RDF>
+  </div>
+</div>
+
+<div class="slide" id="pear">
+  <h2>Pear</h2>
+  <p>PEAR is a framework and distribution system for reusable PHP components.</p>
+  <div class="slide" id="pear-facepalm"><img src="img/picard-facepalm.jpg" /><h3 style="text-align:center">facepalm</div>
+</div>
+
+<div class="slide" id="nuget">
+  <h2>NuGet</h2>
+  <p>NuGet is a free, open source developer focused package management system for the .NET platform intent on simplifying the process of incorporating third party libraries into a .NET application during development. </p>
+  <div class="slide" id="nuget-facepalm"><img src="img/picard-double-facepalm.jpg" /><h3 style="text-align:center">double facepalm</h3></div>
+</div>
+
+<div class="slide" id="good-enough">
+  <h1>Good enough right?</h1>
+</div>
+
+<div class="slide" id="standards">
+	<h2>Maybe not</h2>
+	<img src="img/standards.png" />
+	<div class="slide" id="standards-note"><h3 style="text-align:center">And package managers...</h3></div>
+</div>
+
+<div class="slide" id="problems">
+  <h2>So what doesn't work?</h2>
+	<ul class="slide" id="problems-list">
+	  <li><h3>Metadata</h3></li>
+	  <li><h3>Dependency management</h3></li>
+    <li><h3>Accessibility of Tools</h3></li>
+    <li><h3>Replication</h3></li>
+	</ul>
+</div>
+
+<div class="slide" id="npm">
+  <h1><img src="img/npm.png" /></h1>
+</div>
+
+<div class="slide" id="npm-rejoice">
+  <h1>And there was much rejoicing</h1>
+</div>
+
+<div class="slide" id="enter-npm">
+  <h2>node package manager</h2>
+  <img src="img/npm.png" />
+  <ul>
+    <li class="slide" id="enter-npm-install">
+      <strong>Install it now!</strong>
+      <pre><code>curl http://npmjs.org/install.sh | sh</code></pre>
+    </li>
+    <li class="slide" id="enter-npm-parts">
+      <h3>Composed of essentially two parts:</h3>
+    </li>
+    <li class="slide" id="enter-npm-cli">
+      <h3>npm command-line tool (node.js)</h3>
+      <a href="https://github.com/isaacs/npm">http://github.com/isaacs/npm</a>
+    </li>
+    <li class="slide" id="enter-npm-cli">
+      <h3>npm registry (couchapp)</h3>
+      <a href="https://github.com/isaacs/npmjs.org">https://github.com/isaacs/npmjs.org</a>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="metadata">
+  <h1>Thou shall make metadata human readable.</h1>
+</div>
+
+<div class="slide" id="package-json">
+  <h2>npm-flavored package.json</h2>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+  {
+    "name": "winston",
+    "description": "A multi-transport async logging library for Node.js",
+    "version": "0.5.6",
+    "author": { "name": "Charlie Robbins", "email": "charlie@nodejitsu.com" },
+    "contributors": [
+      { "name": "Matthew Bergman", "email": "mzbphoto@gmail.com" }, 
+      { "name": "Marak Squires", "email": "marak@nodejitsu.com" }
+    ],
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/indexzero/winston.git"
+    },
+    "keywords": ["logging", "sysadmin", "tools"],
+    "dependencies": {
+      "async": "0.1.x",
+      "colors": "0.x.x",
+      "eyes": "0.1.x",
+      "loggly": "~0.3.7",
+      "pkginfo": "0.2.x",
+      "stack-trace": "0.0.x"
+    },
+    "devDependencies": {
+      "vows": "~0.5.11"
+    },
+    "main": "./lib/winston",
+    "scripts": {
+      "test": "vows --spec --isolate"
+    },
+    "engines": {
+      "node": "~0.4.0"
+    }
+  }
+  </div>  
+</div>
+
+<div class="slide" id="conflicting-dependencies">
+  <h1>Thou shall support conflicting dependencies.</h1>
+</div>
+
+<div class="slide" id="conflicts">
+  <h2>{cwd}/node_modules/*</h2>
+  <ul>
+    <li class="slide" id="conflicts-what"><h3>What is a conflict?</h3></li>
+  </ul>
+  <div class="slide" id="conflicts-example">
+    <pre><code>
+      (your-app)
+      |
+      `-- foo@1.x.x
+      |  |
+      |  ` buzz@2.x.x
+      `-- bar@1.x.x
+         |
+         ` buzz@1.x.x
+    </code></pre>
+  </div>
+  <h3 class="slide" id="conflicts-explain">There is no global version of buzz that will work for foo <strong>and</strong> bar</h3>
+</div>
+
+<div class="slide" id="conflicts-no-more">
+  <h2>{cwd}/node_modules/*</h2>
+  <ul>
+    <li class="slide" id="conflicts-no-more-what"><h3>So how would npm handle this?</h3></li>
+  </ul>
+  <div class="slide" id="conflicts-no-more-example">
+    <pre><code>
+      /your-app
+        /node_modules
+          /foo@1.x.x
+            /node_modules
+              /buzz@2.x.x
+          /bar@1.x.x
+            /node_modules
+              /buzz@1.x.x
+    </code></pre>
+  </div>
+  <h3 class="slide" id="conflicts-no-more-explain">In the Ruby world, this is would be referred to as "vendored by default".</h3>
+</div>
+
+<div class="slide" id="conflicting-dependencies">
+  <h1>Thou shall reuse tools whenever possible.</h1>
+</div>
+
+<div class="slide" id="replicate-binary">
+  <h1>Thou shall replicate binary and metadata.</h1>
+</div>
+
+<div class="slide" id="replication">
+  <h2>Replication: Don't make me think</h2>
+  <ul>
+    <li class="slide" id="replication-broken"><h3>Most other package managers have a very poor concept of replication.</h3></li>
+    <li class="slide" id="replication-separate"><h3>At best, replication happens, but it is across separate protocols / formats / religions.</h3></li>
+    <li class="slide" id="replication-npm"><h3>In the npm registry, both the metadata and the binary data are stored in CouchDB.</h3></li>
+    <li class="slide" id="replication-attachments"><h3>Binary data is stored as CouchDB attachments.</h3></li>
+    <li class="slide" id="replication-attachments"><h3>Keep in mind replication **may fail** so you should probably use something like https://github.com/mikeal/replicate.</h3></li>
+  <ul>
+</div>
+
+<div class="slide" id="must-code">
+  <h1>Thou shall do live demos in every presentation.</h1>
+</div>
+
+<div class="slide" id="code-time">
+  <h2>Setup fully-replicated npm</h2>
+  <ul>
+    <li class="slide" id="code-time-doit">
+      <pre><code>
+npm install couchapp -g
+git clone https://github.com/isaacs/npmjs.org.git
+cd npmjs.org
+couchapp push registry/app.js http://localhost:5984/your-database
+couchapp push www/app.js http://localhost:5984/your-database
+      </code></pre>
+    </li>
+    <li class="slide" id="code-time-setup-replication"><h3>Setup replication</h3></li>
+    <li class="slide" id="code-time-config"><h3>Update publishConfig</h3></li>
+    <li class="slide" id="code-time-done"><h3>Done!</h3></li>
+</div>
+
+<div class="slide" id="do-it-yourself">
+  <h1><img src="img/iris-couch.png" /></h1>
+</div>
+
+<div class="slide" id="questions">
+  <h1>require('questions').ask(Date.now);</h1>
+</div>
+
+<div class="slide" id="open-source">
+  <h2>This presentation is Open Source software.</h2>
+  <ol>
+    <li>
+       All software is available under the MIT license. 
+    </li>
+    <li>
+      All content is available under Creative Commons Share-Alike no-attribution commercial ok.
+    </li>
+    <li>
+      Special thanks to Deck.js for making a killer open-source front-end: <a href="http://imakewebthings.github.com/deck.js">http://imakewebthings.github.com/deck.js</a>
+    </li>
+  <ol>
+  <br/><br/>
+  <h3><a style="margin-left:80px" href="http://couchconf-nyc-2011.nodejitsu.com">http://couchconf-nyc-2011.nodejitsu.com</a></h3>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>-->
+<script src="js/jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="deckjs/core/deck.core.js"></script>
+<script src="deckjs/extensions/status/deck.status.js"></script>
+<script src="deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="deckjs/extensions/hash/deck.hash.js"></script>
+<script src="deckjs/extensions/codemirror/deck.codemirror.js"></script>
+
+<!-- Specific to this page -->
+<script type="text/javascript">
+  $(function() {
+  	$.deck('.slide');
+  });
+</script>
+
+</body>
+</html>
