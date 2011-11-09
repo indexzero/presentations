@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Node.js: The parts you haven't seen on HackerNews (mostly)</title>
+	
+	<meta name="description" content="My slides for FirstRound Capital CTO Summit 2011">
+	<meta name="author" content="Charlie Robbins">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="deckjs/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="deckjs/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/themes/elegant.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+  
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="./css/horizontal-slide.css">
+	<link rel="stylesheet" href="./css/slides.css">
+	
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+  
+<div class="slide" id="title-slide">
+	<h1>Node.js for fun, power and profit</h1>
+	<ul>
+  	<li class="slide" id="title-subheader">
+  		<strong>In that order</strong>
+  	</li>
+	</ul>
+</div>
+
+<div class="slide" id="whoami-intro">
+	<h1>require('whoami');</h1>
+	<ul>
+  	<li class="slide" id="like-seriously">
+  		<strong>Like wtf?</strong>
+  	</li>
+	</ul>
+</div>
+
+<div class="slide" id="whoami">
+	<h2>require('whoami');</h2>
+	<ul>
+		<li class="slide" id="whoami-nodejitsu">
+			<h3>Co-Founder / CEO of Nodejitsu.</h3>
+			<img src="img/header-logo-grey.png" style="float:left" />
+			<img src="img/header-logotype.png" style="float:left;padding-top:50px" />
+		</li>
+		<li class="slide" id="whoami-node" style="float:clear">
+			<h3>Involved with Node.js since v0.1.25.</h3>
+			<p>~January 2010</p>
+		</li>
+		<li class="slide" id="whoami-oss">
+		  <h3>If you use Node.js, you probably use a library I wrote or maintain.</h3>
+		  <pre><code>npm install npmcount -g &amp;&amp; npmcount indexzero<br/>(...)<br/>info:   Total packages: 40<br/></code></pre>  
+	</ul>
+</div>
+
+<div class="slide" id="you-know">
+	<h2>require('you').know(this) === true;</h2>
+  <ul>
+		<li class="slide" id="you-know-js">
+			<h3>Node.js is server-side Javascript.</h3>
+		</li>
+		<li class="slide" id="you-know-io">
+			<h3>Node.js is asychronous evented I/O.</h3>
+		</li>
+		<li class="slide" id="you-know-size">
+		  <h3>Node.js is very light-weight.</h3>
+		<li class="slide" id="you-know-young">
+			<h3>Node.js is a young project (~2.5 years)</h3>
+		</li>
+	</ul>
+</div>
+
+<div class="slide" id="focus">
+  <h2>require('development-focus');</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="focus-speed">
+        <h3>Speed.</h3>
+      </li>
+      <li class="slide" id="focus-decoupled">
+        <h3>Decoupled kernels of functionality.</h3>
+      </li>
+      <li class="slide" id="focus-experimentation">
+        <h3>Experimentation.</h3>
+      </li>
+      <li class="slide" id="focus-isomorphism">
+        <h3>Client-Server Isomorphism.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="fun">
+  <h1>require('fun');</h1>
+  <img src="img/meme-fun.jpg" id="fun-memes" class="slide" />
+</div>
+
+<div class="slide" id="advantages">
+  <h2>require('fun').highlights;</h2>
+  <h2>
+    <ul>
+      <li class="slide" id="advantages-rules">
+        <h3>No pre-defined rules.</h3>
+      </li>
+      <li class="slide" id="advantages-libraries">
+        <h3>Tons of libraries.</h3>
+      </li>
+      <li class="slide" id="advantages-visibility">
+        <h3>High visibility.</h3>
+      </li>
+      <li class="slide" id="advantages-community">
+        <h3>Community.</h3>
+      </li>
+    </ul>
+  </h2>
+</div>
+
+<div class="slide" id="community">
+  <h2>require('fun').community;</h2>
+  <ul>
+    <li>
+      <h3>IRC</h3>
+      <ul>
+        <li><h3>#node.js</h3></li>
+        <li><h3>#nodejitsu</h3></li>
+      </ul>
+    </li>
+    <li>
+      <h3>Google Groups</h3>
+      <ul>
+        <li><h3>nodejs</h3></li>
+        <li><h3>nodejs-dev</h3></li>
+      </ul>
+    </li>
+    <li>
+      <h3>Intertubes</h3>
+      <ul>
+        <li><h3>blog.nodejitsu.com</h3></li>
+        <li><h3>blog.nodejs.org</h3></li>
+        <li><h3>howtonode.org</h3></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="dance-party">
+  <h2>require('fun').danceParty;</h2>
+  <div>
+    <h3>What's fun? Making dance songs about Javascript!</h3>
+    <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F25042202"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F25042202" type="application/x-shockwave-flash" width="100%"></embed> </object>  <span><a href="http://soundcloud.com/marak/the-stack-trace-boyz-sexy">The Stack Trace Boyz - Sexy Script</a> by <a href="http://soundcloud.com/marak">marak</a></span> 
+  </div>
+</div>
+
+<div class="slide" id="rap-battle">
+  <h2>require('fun').rapBattle;</h2>
+  <div>
+    <h3>What's fun? Auto-generated rap battles between Node.js developers!</h3>
+    <iframe src="http://blip.tv/play/g_MngtCpKQI.html" width="550" height="393" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_MngtCpKQI" style="display:none"></embed>
+  </div>
+</div>
+
+<div class="slide" id="power">
+  <h1>require('power');</h1>
+  <img src="img/meme-power.jpg" id="power-memes" class="slide" />
+</div>
+
+<div class="slide" id="require-flatiron">
+  <h1>require('flatiron');</h1>
+</div>
+
+<div class="slide" id="flatiron-initiative">
+  <h2 class="flatiron"></h2>
+  <h3>An initiative to build a collection of decoupled tools with the same standard of quality and performance that you would expect from anything built by <a href="http://www.nodejitsu.com">Nodejitsu</a>.</h3>
+</div>
+
+<div class="slide" id="flatiron-framework">
+  <h2 class="flatiron"></h2>
+  <h3>A full-stack web application development framework which packages these tools together to make <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">isomorphic</a> and <a href="http://nodejs.org/docs/v0.6.0/api/streams.html">stream-based</a> application development easier.
+</div>
+
+<div class="slide" id="flatiron-isomorphic">
+  <h2 class="flatiron"><p>Define: Isomorphic Code</p></h2>
+  <h3>Code is said to be <a href="http://www.merriam-webster.com/dictionary/isomorphic">Isomorphic</a> if it is possible to execute its API both on the server and in a browser.</h3>
+  
+  <img src="img/flatiron-distribution.png" />
+</div>
+
+<div class="slide" id="flatiron-breadth">
+  <h2 class="flatiron"><p>Overwhelmed?</p></h2>
+  <h3>There currently <a href="http://github.com/flatiron">15</a> projects in the Flatiron initiative. Don't worry if this seems like a lot to take in at once. <a href="http://nodejitsu.com">It's what we expected.</a> </h3>  
+</div>
+
+<div class="slide" id="flatiron-routing">
+  <h2 class="flatiron"><p>Routing: Sugarskull</p></h2>
+  <h3>An client/server isomorphic router for REST and WebSocket Requests</h3>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var sugarskull = require('sugarskull');
+    
+    //
+    // Browser, or server (http and cli)  
+    //
+    var browser = new sugarskull.Router(),
+        http = new sugarskull.http.Router(),
+        cli = new sugarskull.cli.Router();
+  </div>
+</div>
+
+<div class="slide" id="flatiron-templating">
+  <h2 class="flatiron"><p>Templating: Plates</p></h2>
+  <h3>unobtrusive, thin and fast anti-templating</h3>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var Plate = require('plates');
+    var plate = new Plate;
+
+    var html = '<div id="test">Old Value</div>';
+    var data = { "test": "New Value" };
+
+    var output = plate(html, data).html(); 
+
+    //
+    // with the output, you could serve it up or process it further with JSDOM
+    //
+    response.end(output);
+  </div>
+</div>
+
+<div class="slide" id="flatiron-validation">
+  <h2 class="flatiron"><p>Validation: Revalidator<p></h2>
+  <h3>A cross-browser / node.js validator used by resourceful and flatiron</h3>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var revalidator = require('revalidator');
+
+    var validation = revalidator.validate(someObject, {
+      properties: {
+        // ... other properties omitted
+        body: {
+          description: 'what to store at the url',
+          type: 'any',
+          default: null
+        }
+      }
+    };
+  </div>
+</div>
+
+
+<div class="slide" id="flatiron-cli-sample">
+  <h2 class="flatiron"><p>Hello World (CLI)</p></h2>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var flatiron = require('flatiron'),
+        app = flatiron.app;
+
+    app.use(flatiron.plugins.cli, {
+      dir: __dirname
+    });
+
+    app.cmd('app start', function () {
+      app.prompt.get('name', function (err, name) {
+        console.dir(arguments);
+      })
+    })
+
+    app.init(function () {
+      app.start();
+    });
+  </div>
+</div>
+
+<div class="slide" id="flatiron-http-sample">
+  <h2 class="flatiron"><p>Hello World (http)</p></h2>
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+    var fs = require('fs'),
+        favicon = require('./favicon'),
+        flatiron = require('flatiron'),
+        app = flatiron.app;
+
+    app.use(flatiron.plugins.http, {
+      before: [favicon]
+    });
+
+    app.router.get(/foo/, function () {
+      this.res.writeHead(200, { 'Content-Type': 'text/plain' })
+      this.res.end('hello world\n');
+    });
+
+    app.router.post(/foo/, { stream: true }, function () {
+      var req = this.req,
+          res = this.res,
+          writeStream;
+
+      writeStream = fs.createWriteStream(Date.now() + '-foo.txt');
+      req.pipe(writeStream);
+
+      writeStream.on('close', function () {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('wrote to a stream!');
+      });
+    });
+    
+    app.start(function () {
+      console.log('flatiron with http running on 8080');
+    });
+  </div>
+</div>
+
+
+<div class="slide" id="profit">
+  <h1>require('profit');</h1>
+  <img src="img/meme-profit.jpg" id="profit-memes" class="slide" />
+</div>
+
+<div class="slide" id="profit-problem">
+  <h2>require('profit').problems;</h2>
+  <ul>
+    <li class="slide" id="profit-problem-oss">
+      <h3>Monetizing Open Source is hard.</h3>
+    </li>
+    <li class="slide" id="profit-problems-conflict">
+      <h3>There are conflicting goals.</h3>
+    </li>
+    <li class="slide" id="profit-problems-question">
+      <h3>Are you a library or a company?</h3>
+    </li>
+    <li class="slide" id="profit-problems-joke">
+      <h3>Don't be underpants gnomes.</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="gnomes">
+  <h2>require('profit').gnomes;</h2>
+  <img src="img/underpants-gnomes.jpg" />
+</div>
+
+<div class="slide" id="gnomes-profit">
+  <h2>require('profit').gnomes;</h2>
+  <img src="img/underpants-gnomes-business-model.png" />
+</div>
+
+<div class="slide" id="profit-theory">
+  <h2>require('profit').theory;</h2>
+  <ul>
+    <li class="slide" id="profit-theory-optimal">
+      <h3>Open Source is optimal social good.</h3>
+    </li>
+    <li class="slide" id="profit-theory-suboptimal">
+      <h3>Closed Source is suboptimal.</h3>
+    </li>
+    <li class="slide" id="profit-theory-enables">
+      <h3>Closed Source enables more Open Source.</h3>
+    </li>
+    <li class="slide" id="profit-theory-paradox">
+      <h3>Paradox? No!</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="oss-separation">
+  <h2>require('profit').theory;</h2>
+  <h3>In order to create more Open Source, Closed Source must exist.</h3>
+  <img src="img/open-source-separation.png" />
+</div>
+
+<div class="slide" id="oss-small">
+  <h2>require('profit').theory;</h2>
+  <h3>Too little and the relevance of your organization to an Open Source community is low.</h3>
+  <img src="img/open-source-small.png" />
+</div>
+
+<div class="slide" id="oss-large">
+  <h2>require('profit').theory;</h2>
+  <h3>Too much and the relevance of your organization to your Customers is low.</h3>
+  <img src="img/open-source-big.png" />
+</div>
+
+<div class="slide" id="profit-conclusion">
+  <h2>require('profit').lessons;</h2>
+  <ul>
+    <li class="slide" id="profit-conclusion-no">
+      <h3>There is no silver bullet.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-understanding">
+      <h3>Understanding your value to everyone is crucial.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-expectations">
+      <h3>Manage expectations appropriately.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-free">
+      <h3>There is room between Closed Source and Open Source (free version?).</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="questions">
+  <h1>require('questions').ask(Date.now);</h1>
+</div>
+
+<div class="slide" id="open-source">
+  <h2>require('open-source');</h2>
+  <p>This presentation is Open Source software.</p>
+  <ol>
+    <li>
+       All software is available under the MIT license. 
+    </li>
+    <li>
+      All content is available under Creative Commons Share-Alike no-attribution commercial ok.
+    </li>
+    <li>
+      Special thanks to Deck.js for making a killer open-source front-end: <a href="http://imakewebthings.github.com/deck.js">http://imakewebthings.github.com/deck.js</a>
+    </li>
+    
+    <br/><br/>
+    <h3><a href="http://swdc-2011.nodejitsu.com">http://swdc-2011.nodejitsu.com</a></h3>
+  <ol>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>-->
+<script src="js/jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="deckjs/core/deck.core.js"></script>
+<script src="deckjs/extensions/status/deck.status.js"></script>
+<script src="deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="deckjs/extensions/hash/deck.hash.js"></script>
+<script src="deckjs/extensions/codemirror/deck.codemirror.js"></script>
+
+<!-- Specific to this page -->
+<script type="text/javascript">
+  $(function() {
+  	$.deck('.slide');
+  });
+</script>
+
+</body>
+</html>
