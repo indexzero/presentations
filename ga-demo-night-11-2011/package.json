@@ -1,0 +1,14 @@
+{
+  "name": "ga-demo-night-11-2011",
+  "version": "0.0.0-2",
+  "subdomain": "ga-demo",
+  "dependencies": {
+    "http-server": "0.2.5",
+    "colors": "*",
+    "optimist": "*",
+    "wordwrap": "*"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/http-server"
+  }
+}
