@@ -1,0 +1,11 @@
+{
+  "name": "nodesummit-workshop-1",
+  "version": "0.0.0-3",
+  "subdomain": "nsw1",
+  "dependencies": {
+    "http-server": "0.2.5"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/http-server"
+  }
+}
