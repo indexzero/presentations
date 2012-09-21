@@ -1,0 +1,14 @@
+{
+  "name": "swdc-2011",
+  "version": "0.0.0-2",
+  "subdomain": "swdc-2011",
+  "dependencies": {
+    "http-server": "0.2.5",
+    "colors": "*",
+    "optimist": "*",
+    "wordwrap": "*"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/http-server"
+  }
+}

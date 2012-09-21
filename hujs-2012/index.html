@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Node.js: The parts you haven't seen on HackerNews (mostly)</title>
+	
+	<meta name="description" content="My slides for FirstRound Capital CTO Summit 2011">
+	<meta name="author" content="Charlie Robbins">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="deckjs/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="deckjs/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="deckjs/extensions/codemirror/themes/elegant.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+  
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="./css/horizontal-slide.css">
+	<link rel="stylesheet" href="./css/slides.css">
+	
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<div class="slide" id="title-slide">
+  <h1>Node.js for fun, power and profit</h1>
+</div>
+  
+<div class="slide" id="title-or">
+	<h1>AUDIBLE</h1>
+</div>
+
+<div class="slide" id="title-slide-cn">
+  <h1>Node.js  乐趣, 强大, ¥</h1>
+</div>
+
+<div class="slide" id="me">
+  <h1>I speak english</h1>
+</div>
+
+<div class="slide" id="you">
+  <h1>你说中文</h1>
+</div>
+
+<div class="slide" id="us">
+  <h2>We all speak code</h2>
+  <br/>  <br/>  <br/>  <br/>
+  <div class="big-code"> 
+  <div id="code" name="code" class="code" mode="javascript" theme="elegant" style="display: none;">
+
+    var code = ['you', 'me'];
+    
+    console.log(code.indexOf('me'))  // true
+    console.log(code.indexOf('you')) // true
+  </div>
+  </div>
+</div>
+
+<div class="slide" id="whoami-intro">
+	<h1>require(''我');</h1>
+	<ul>
+  	<li class="slide" id="like-seriously">
+  		<strong>Like wtf?</strong>
+  	</li>
+	</ul>
+</div>
+
+<div class="slide" id="whoami">
+	<h2>require(''我');</h2>
+	<ul>
+	  <li class="slide" id="whoami-handle">
+			<h3>You can find me on the Internet <a href="http://github.com/indexzero">@indexzero</a>.</h3>
+		</li>
+		<li class="slide" id="whoami-nodejitsu">
+			<h3>Co-Founder / CEO of Nodejitsu.</h3>
+			<img src="img/header-logo-grey.png" style="float:left" />
+			<img src="img/header-logotype.png" style="float:left;padding-top:50px" />
+		</li>
+		<li class="slide" id="whoami-node" style="float:clear">
+			<h3>Involved with Node.js since v0.1.25.</h3>
+			<p>~January 2010</p>
+		</li>
+		<li class="slide" id="whoami-oss">
+		  <h3>If you use Node.js, you probably use a library I wrote or maintain.</h3>
+		  <pre><code>https://npmjs.org/browse/author/indexzero</code></pre>  
+	</ul>
+</div>
+
+<div class="slide" id="fun">
+  <h1>require('乐趣');
+</div>
+
+<div class="slide" id="power">
+  <h1>require('强大');
+</div>
+
+<div class="slide" id="npm-2011">
+  <h2>require('npm').2011</h2>
+  
+  <br/><br/><br/><br/><br/><br/>
+  <pre><code>packages.length === 1800;<br/><br/>authors.length > 730;</code></pre>    
+</div>
+
+<div class="slide" id="npm-2012">
+  <h2>require('npm').2012</h2>
+  
+  <br/><br/><br/><br/><br/><br/>
+  <pre><code>packages.length === 14608;<br/><br/>authors.length > 3800;</code></pre>
+</div>
+
+<div class="slide" id="npm-downloads">
+  <h1>10,065,042</h1>
+</div>
+
+<div class="slide" id="profit">
+  <h1>require('¥');</h1>
+</div>
+
+<div class="slide" id="profit-problem">
+  <h2>require('¥').problems;</h2>
+  <ul>
+    <li class="slide" id="profit-problem-oss">
+      <h3>Monetizing Open Source is hard.</h3>
+    </li>
+    <li class="slide" id="profit-problems-conflict">
+      <h3>There are conflicting goals.</h3>
+    </li>
+    <li class="slide" id="profit-problems-question">
+      <h3>Are you a library or a company?</h3>
+    </li>
+    <li class="slide" id="profit-problems-joke">
+      <h3>Don't be underpants gnomes.</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="gnomes">
+  <h2>require('¥').gnomes;</h2>
+  <img src="img/underpants-gnomes.jpg" />
+</div>
+
+<div class="slide" id="gnomes-profit">
+  <h2>require('¥').gnomes;</h2>
+  <img src="img/underpants-gnomes-business-model.png" />
+</div>
+
+<div class="slide" id="profit-theory">
+  <h2>require('¥').theory;</h2>
+  <ul>
+    <li class="slide" id="profit-theory-optimal">
+      <h3>Open Source is optimal social good.</h3>
+    </li>
+    <li class="slide" id="profit-theory-suboptimal">
+      <h3>Closed Source is suboptimal.</h3>
+    </li>
+    <li class="slide" id="profit-theory-enables">
+      <h3>Closed Source enables more Open Source.</h3>
+    </li>
+    <li class="slide" id="profit-theory-paradox">
+      <h3>Paradox? No!</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="oss-separation">
+  <h2>require('¥').theory;</h2>
+  <h3>In order to create more Open Source, Closed Source must exist.</h3>
+  <img src="img/open-source-separation.png" />
+</div>
+
+<div class="slide" id="oss-small">
+  <h2>require('¥').theory;</h2>
+  <h3>Too little and the relevance of your organization to an Open Source community is low.</h3>
+  <img src="img/open-source-small.png" />
+</div>
+
+<div class="slide" id="oss-large">
+  <h2>require('¥').theory;</h2>
+  <h3>Too much and the relevance of your organization to your Customers is low.</h3>
+  <img src="img/open-source-big.png" />
+</div>
+
+<div class="slide" id="profit-conclusion">
+  <h2>require('¥').lessons;</h2>
+  <ul>
+    <li class="slide" id="profit-conclusion-no">
+      <h3>There is no silver bullet.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-understanding">
+      <h3>Understanding your value to everyone is crucial.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-expectations">
+      <h3>Manage expectations appropriately.</h3>
+    </li>
+    <li class="slide" id="profit-conclusion-free">
+      <h3>There is room between Closed Source and Open Source (free version?).</h3>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="questions">
+  <h1>require('questions').ask(Date.now);</h1>
+</div>
+
+<div class="slide" id="open-source">
+  <h2>require('open-source');</h2>
+  <p>This presentation is Open Source software.</p>
+  <ol>
+    <li>All software is available under the MIT license.</li>
+    <li>All content is available under Creative Commons Share-Alike no-attribution commercial ok.</li>
+    <li>Special thanks to Deck.js for making a killer open-source front-end: <a href="http://imakewebthings.github.com/deck.js">http://imakewebthings.github.com/deck.js</a></li>
+    
+    <br/><br/>
+    <h3><a href="http://hujs-2012.nodejitsu.com">http://hujs-2012.nodejitsu.com</a></h3>
+  <ol>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>-->
+<script src="js/jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="deckjs/core/deck.core.js"></script>
+<script src="deckjs/extensions/status/deck.status.js"></script>
+<script src="deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="deckjs/extensions/hash/deck.hash.js"></script>
+<script src="deckjs/extensions/codemirror/deck.codemirror.js"></script>
+
+<!-- Specific to this page -->
+<script type="text/javascript">
+  $(function() {
+  	$.deck('.slide');
+  });
+</script>
+
+</body>
+</html>
