@@ -1,0 +1,20 @@
+{
+	"author": "Charlie Robbins",
+	"subdomain": "likeaboss",
+	"name": "oss-like-a-boss",
+	"description": "Open Source LIKE A BOSS",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/indexzero/presentations.git"
+	},
+	"engines": {
+		"node": "~0.8.0"
+	},
+	"dependencies": {
+		"http-server" : "*"
+	},
+	"scripts": {
+    "start": "node_modules/.bin/http-server"
+  }
+}
