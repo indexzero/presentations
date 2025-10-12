@@ -5,7 +5,6 @@ transition: slide-left
 
 <script setup>
 import { ref } from 'vue'
-import { GifHook, KineticText, TypewriterText } from '../components/kinetic'
 
 const gifEnded = ref(false)
 const showText = ref(false)
@@ -18,32 +17,38 @@ function onGifEnd() {
 }
 </script>
 
-# Example: Kinetic Typography
+# Full-Bleed GIF with Kinetic Typography
+
+<!-- Full-bleed background GIF with mask -->
+<GifHook
+  src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif"
+  :duration="2.5"
+  :mask-opacity="0.4"
+  @ended="onGifEnd"
+/>
+
+<!-- Content on top of GIF -->
+<div class="relative z-10 h-full flex flex-col justify-center items-center text-white">
+
+<div v-if="showText" class="space-y-8 text-center">
+
+<KineticText from="right" :duration="500" :delay="0">
+<h2 class="text-6xl font-bold">The web isn't finished</h2>
+</KineticText>
+
+<KineticText from="bottom" :duration="500" :delay="500" :dissolve="true">
+<p class="text-2xl opacity-90">Infrastructure as performance art</p>
+</KineticText>
+
+</div>
+
+</div>
 
 <!--
-This example shows how to use the kinetic components with Slidev.
-The GIF plays first, then triggers the text animations.
+The GIF is now full-bleed (100% width/height) with an optional dark mask overlay.
+Text appears on top with proper z-index positioning.
+GIF stops playing after first loop (2.5 seconds).
 -->
-
-<div class="h-80 mb-8">
-  <GifHook
-    src="/gifs/thinking.gif"
-    :duration="2.5"
-    @ended="onGifEnd"
-  />
-</div>
-
-<div v-if="showText" class="space-y-8">
-
-  <KineticText from="right" :duration="500" :delay="0">
-    <h2 class="text-4xl font-bold">The web isn't finished</h2>
-  </KineticText>
-
-  <KineticText from="bottom" :duration="500" :delay="500" :dissolve="true">
-    <p class="text-xl opacity-80">Infrastructure as performance art</p>
-  </KineticText>
-
-</div>
 
 ---
 layout: center
