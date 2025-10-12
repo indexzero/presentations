@@ -1,0 +1,128 @@
+/* Custom styles for the presentation */
+
+:root {
+  --slidev-theme-primary: #cb3837; /* npm red */
+  --slidev-theme-accent: #f9c74f; /* nodejitsu yellow */
+}
+
+/* Better code highlighting */
+pre {
+  @apply text-sm !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark pre {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Improve quote layout */
+.slidev-layout.quote {
+  @apply flex items-center justify-center;
+}
+
+.slidev-layout.quote h1 {
+  @apply text-3xl md:text-5xl italic;
+  line-height: 1.2;
+}
+
+/* Statement layout improvements */
+.slidev-layout.statement h1 {
+  @apply text-4xl md:text-6xl font-bold text-center;
+  line-height: 1.1;
+}
+
+/* npm accent color for emphasis */
+.npm-red {
+  color: #cb3837;
+}
+
+/* nodejitsu ninja */
+.ninja {
+  filter: grayscale(100%);
+}
+
+/* CouchDB accent */
+.couch-red {
+  color: #a2231d;
+}
+
+/* Better speaker notes */
+.slidev-note {
+  @apply text-sm opacity-80;
+}
+
+/* Custom animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-scale {
+  animation: fadeInScale 0.5s ease-out;
+}
+
+/* Better v-click animations */
+.slidev-vclick-hidden {
+  @apply opacity-0;
+  transform: translateY(10px);
+}
+
+.slidev-vclick-target {
+  transition: all 0.3s ease-out;
+}
+
+/* Improve code block styling */
+.slidev-code {
+  @apply rounded-lg shadow-lg;
+}
+
+/* Better list styling */
+.slidev-layout li {
+  @apply my-3;
+}
+
+.slidev-layout li strong {
+  @apply text-orange-500 dark:text-orange-400;
+}
+
+/* Icon buttons */
+.slidev-icon-btn {
+  @apply transition-all duration-200;
+}
+
+.slidev-icon-btn:hover {
+  @apply transform scale-110;
+}
+
+/* End layout styling */
+.slidev-layout.end {
+  @apply bg-gradient-to-br from-gray-900 to-gray-800;
+}
+
+/* Mikeal tribute styling */
+.mikeal-tribute {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid improvements */
+.grid {
+  @apply gap-6;
+}
+
+/* Tombstone emoji animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
