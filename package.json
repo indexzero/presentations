@@ -1,0 +1,14 @@
+{
+  "name": "@(0)/talks",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Various presentations that I have made over the span of my time on this pale blue dot.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indexzero/presentations.git"
+  },
+  "author": "Charlie Robbins <npm@charlie.dev>",
+  "license": "Apache-2.0",
+  "homepage": "https://talks.charlie.dev/"
+}
