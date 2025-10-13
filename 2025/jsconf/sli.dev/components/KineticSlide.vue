@@ -137,7 +137,7 @@ const overlayStyle = computed(() => {
 const getLineClasses = (line: Line) => {
   const classes = [
     `k-role-${line.role || 'normal'}`,
-    line.color ? `k-color-${line.color}` : '',
+    line.color ? `k-${line.color}` : '',  // Changed from k-color-${line.color}
     line.size ? `k-text-${line.size}` : `k-text-${getDefaultSize(line.role)}`,
     line.wings ? 'has-wings' : ''
   ]
@@ -340,4 +340,30 @@ const getAnimationStyle = (index: number, sectionIndex: number) => {
 .k-transition-slide-up .k-line { --line-animation: k-slide-up; }
 .k-transition-slide-left .k-line { --line-animation: k-slide-in; }
 .k-transition-bounce .k-line { --line-animation: k-bounce; }
+
+/* Color Classes */
+.k-cyan { color: #00ffff !important; }
+.k-pink { color: #ff006e !important; }
+.k-green { color: #00ff00 !important; }
+.k-yellow { color: #ffff00 !important; }
+.k-purple { color: #9945ff !important; }
+.k-orange { color: #ff6b35 !important; }
+.k-white { color: #ffffff !important; }
+.k-dark { color: #1a1a1a !important; }
+
+/* Role-based text sizes */
+.k-role-hero {
+  font-size: clamp(5rem, 10vw, 8rem) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.k-role-connector {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem) !important;
+  opacity: 0.9;
+}
+
+.k-role-normal {
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+}
 </style>

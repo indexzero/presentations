@@ -1,8 +1,3 @@
----
-background: https://source.unsplash.com/collection/94734566/1920x1080
-class: text-center
----
-
 # The Content Addressable Web
 
 ## Lessons from NPM, CouchDB, and Mikeal Rogers
@@ -29,8 +24,28 @@ class: text-center
 </div>
 
 <!--
-TRANSCRIPT REFERENCE:
-"What did I learn from Michael Rogers? I'll talk about the content addressable web."
-
 Opening slide. Remember to breathe. This talk is about Mikeal's vision and how it applies today.
+-->
+
+---
+layout: intro
+---
+
+# Charlie Robbins
+
+<div class="leading-8 opacity-80 text-xl">
+
+- Principal Engineer @ Chainguard
+- Founder of Nodejitsu 🥷
+- Keeping NPM safe for people who want to pay for it
+- You might know me from **such things as the internet**
+
+</div>
+
+<div class="mt-8 text-lg opacity-60">
+Today: After ~20 years of npm, what have we learned?
+</div>
+
+<!--
+Brief introduction. Keep it light.
 -->

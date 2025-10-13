@@ -10,9 +10,14 @@ import TypewriterText from '../components/kinetic/TypewriterText.vue'
 
 // Import legacy components (to be removed after migration)
 import WordBlock from '../components/WordBlock.vue'
-import BandMode from '../components/BandMode.vue'
+
+// Import the master component
+import KineticSlide from '../components/KineticSlide.vue'
 
 export default defineAppSetup(({ app }) => {
+  // Register the master component
+  app.component('KineticSlide', KineticSlide)
+
   // Register new minimal components
   app.component('KineticText', KineticText)
   app.component('KineticBand', KineticBand)
@@ -20,5 +25,4 @@ export default defineAppSetup(({ app }) => {
 
   // Keep legacy components temporarily for backward compatibility
   app.component('WordBlock', WordBlock)
-  app.component('BandMode', BandMode)
 })
