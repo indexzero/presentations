@@ -1,8 +1,6 @@
-// Export all kinetic typography components
-export { default as GifHook } from './GifHook.vue'
-export { default as KineticText } from './KineticText.vue'
+// Export remaining kinetic typography component
 export { default as TypewriterText } from './TypewriterText.vue'
 
-// Re-export composables for convenience
-export { useKineticMotion, DIRECTIONS, type DirectionName } from '../../composables/useKineticMotion'
-export { useTimeline, MOTION_DURATION, CHAR_DURATION, TRANSITION_DURATION } from '../../composables/useTimeline'
+// Note: Composables may also need to be checked/removed if they don't exist
+// export { useKineticMotion, DIRECTIONS, type DirectionName } from '../../composables/useKineticMotion'
+// export { useTimeline, MOTION_DURATION, CHAR_DURATION, TRANSITION_DURATION } from '../../composables/useTimeline'

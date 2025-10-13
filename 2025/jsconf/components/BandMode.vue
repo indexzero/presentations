@@ -14,31 +14,32 @@
         :data-index="index"
         :style="{ '--band-color': band.customColor }"
       >
-        <CompressionZone :pressure="band.pressure || 'medium'">
-          <TypographicScaffold v-if="band.scaffold">
-            <template v-for="(block, blockIndex) in band.blocks" :key="blockIndex">
-              <WordBlock
-                v-if="block.text"
-                :semantic="block.semantic"
-                :scale="block.scale || band.scale"
-                :direction="block.direction || 'right'"
-                :delay="calculateDelay(index, blockIndex)"
-                :typewriter="block.typewriter"
-              >
-                {{ block.text }}
-              </WordBlock>
-              <span v-if="block.dash" class="scaffold-dash">—</span>
-            </template>
-          </TypographicScaffold>
+        <!-- Scaffold mode with blocks -->
+        <div v-if="band.scaffold && band.blocks" class="band-scaffold">
+          <template v-for="(block, blockIndex) in band.blocks" :key="blockIndex">
+            <WordBlock
+              v-if="block.text"
+              :semantic="block.semantic"
+              :scale="block.scale || band.scale"
+              :direction="block.direction || 'right'"
+              :delay="calculateDelay(index, blockIndex)"
+              :typewriter="block.typewriter"
+            >
+              {{ block.text }}
+            </WordBlock>
+            <span v-if="block.dash" class="scaffold-dash">—</span>
+          </template>
+        </div>
 
-          <div v-else-if="band.content" class="band-content">
-            <component :is="band.content" v-bind="band.props" />
-          </div>
+        <!-- Custom content mode -->
+        <div v-else-if="band.content" class="band-content">
+          <component :is="band.content" v-bind="band.props" />
+        </div>
 
-          <div v-else class="band-text">
-            {{ band.text }}
-          </div>
-        </CompressionZone>
+        <!-- Simple text mode -->
+        <div v-else class="band-text">
+          {{ band.text }}
+        </div>
       </div>
     </TransitionGroup>
   </div>
@@ -47,9 +48,6 @@
 <script setup lang="ts">
 import { inject } from 'vue'
 import WordBlock from './WordBlock.vue'
-import CompressionZone from './CompressionZone.vue'
-import TypographicScaffold from './TypographicScaffold.vue'
-import type { KineticContext } from './KineticProvider.vue'
 
 export interface Band {
   id?: string
@@ -84,7 +82,7 @@ const props = withDefaults(defineProps<Props>(), {
   bandDelay: 200 // ms between bands
 })
 
-const kinetic = inject<KineticContext>('kinetic')
+// Kinetic context removed - no longer needed
 
 const calculateDelay = (bandIndex: number, blockIndex: number) => {
   if (!props.progressive) return props.baseDelay
@@ -167,6 +165,19 @@ const onEnter = (el: Element, done: () => void) => {
   background: rgba(0, 0, 0, 0.8);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.band-scaffold {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scaffold-dash {
+  font-size: 2rem;
+  opacity: 0.5;
 }
 
 .band-content {

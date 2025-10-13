@@ -1,0 +1,177 @@
+/* Kinetic Typography Utility System */
+
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Tungsten';
+  src: url('/sample/fonts/Tungsten-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Black';
+  src: url('/sample/fonts/GT-Walsheim-Office-Black.otf') format('opentype');
+  font-weight: 900;
+}
+
+/* ========================================
+   Compressed Typography System
+   ======================================== */
+.k-text {
+  font-family: 'Tungsten', 'GT Walsheim Black', 'Inter', sans-serif !important;
+  font-weight: 900 !important;
+  line-height: 0.9 !important;
+  text-transform: uppercase !important;
+}
+
+.k-compressed {
+  letter-spacing: -0.02em !important;
+}
+
+.k-ultra-compressed {
+  letter-spacing: -0.04em !important;
+}
+
+/* ========================================
+   Semantic Colors
+   ======================================== */
+.k-cyan { color: #00ffff !important; }
+.k-pink { color: #ff006e !important; }
+.k-green { color: #00ff00 !important; }
+.k-yellow { color: #ffff00 !important; }
+.k-purple { color: #9945ff !important; }
+.k-orange { color: #ff6b35 !important; }
+.k-white { color: #ffffff !important; }
+.k-dark { color: #1a1a1a !important; }
+
+/* ========================================
+   Scale System (Responsive)
+   ======================================== */
+.k-small { font-size: 2rem !important; }
+.k-medium { font-size: 4rem !important; }
+.k-large { font-size: 6rem !important; }
+.k-massive {
+  font-size: 10rem !important;
+  letter-spacing: -0.03em !important;
+}
+.k-ultra {
+  font-size: clamp(12rem, 15vw, 16rem) !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* ========================================
+   Scaffolding Lines (Between elements only)
+   ======================================== */
+.k-scaffold {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.k-scaffold > * {
+  position: relative;
+  margin: 0.5rem 0 !important;
+}
+
+/* Lines only between elements, not on first or last */
+.k-scaffold > *:not(:first-child):not(:last-child)::before,
+.k-scaffold > *:not(:first-child):not(:last-child)::after {
+  content: '';
+  position: absolute !important;
+  top: 50% !important;
+  height: 1px !important;
+  width: 200px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.k-scaffold > *:not(:first-child):not(:last-child)::before {
+  right: calc(100% + 2rem) !important;
+}
+
+.k-scaffold > *:not(:first-child):not(:last-child)::after {
+  left: calc(100% + 2rem) !important;
+}
+
+/* ========================================
+   Band System
+   ======================================== */
+.k-band {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.k-band-purple {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.k-band-pink {
+  background: #ff006e;
+}
+
+.k-band-green {
+  background: #00ff00;
+  color: #000;
+}
+
+.k-band-yellow {
+  background: #ffff00;
+  color: #000;
+}
+
+.k-band-white {
+  background: #ffffff;
+  color: #000;
+}
+
+.k-band-dark {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ========================================
+   GIF Overlay Helpers
+   ======================================== */
+.k-overlay {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* ========================================
+   Text Shadow for Readability
+   ======================================== */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ========================================
+   Utility Helpers
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
