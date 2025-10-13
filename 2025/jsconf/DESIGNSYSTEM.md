@@ -26,27 +26,40 @@ This document captures the motion design and aesthetic principles from the analy
 
 ## The Word Block Atomic System
 
-Based on analysis of actual slide transitions, this presentation uses a fundamentally different typographic approach where text is treated as discrete, animatable blocks rather than flowing paragraphs. This is pure Atomic Design applied to kinetic typography.
+Based on comprehensive analysis of 100+ slide transitions, this presentation uses a sophisticated typographic system where text is treated as discrete, animatable blocks that can be composed in multiple ways. This is pure Atomic Design applied to kinetic typography at scale.
 
 ### Atomic Components
 
 1. **Word Blocks**: Individual words or short phrases as discrete visual units
-2. **Semantic Colors**: Color assignments that carry meaning at the word level
+2. **Semantic Colors**: Expanded color assignments that carry meaning at the word level
    - Yellow (#f9c74f): Emphasis, warning, urgency ("2.5 TRILLION TONS OF CO²")
-   - Cyan/Green: Technical, positive terms ("electrical & computer engineering")
-   - Hot Pink (#FF00FF): Action, energy ("Power", "Get Started")
-   - White: Neutral, supporting text
-3. **Typographic Scaffolding**: Em-dashes (—) as structural connectors that create visual grids
-4. **Compression Zones**: Boundaries that constrain text expansion
+   - Cyan/Green (#4ecdc4): Technical, positive terms ("electrical & computer engineering")
+   - Hot Pink (#ff006e): Action, energy ("Power", "Get Started")
+   - Orange (#ff6b35): Urgent action required ("PUT IT BACK", "LOWER OUR CARBON OUTPUT")
+   - White (#ffffff): Neutral, supporting text
+   - Purple gradients: Corporate/intro backgrounds
+   - Dark/Black: Separation and visual breaks
+3. **Typographic Scaffolding**: Flexible grid system using em-dashes and spacing
+   - Horizontal connectors between word blocks
+   - Vertical dividers for columns
+   - Invisible scaffolding through consistent spacing
+   - Mixed scaffolding for complex compositions
+4. **Multi-Directional Compression Zones**:
+   - Vertical compression (top/bottom boundaries)
+   - Horizontal compression (left/right boundaries)
+   - Diagonal compression (angular layouts)
+   - Radial compression (center-focused)
+   - Temporal compression (rapid succession)
 
-### Typography Hierarchy (Not H1/H2/H3 but SHOUT/speak/whisper)
+### Typography Hierarchy (SHOUT/speak/whisper/annotate)
 
-- **MASSIVE SCALE**: Primary statements that demand attention ("ELECTRICAL", "SONIC")
+- **MASSIVE SCALE**: Primary statements that demand attention ("ELECTRICAL", "SONIC", "2.5 TRILLION TONS")
 - **Large Scale**: Supporting phrases that provide context
 - **Medium Scale**: Metadata and contextual information
+- **Annotation Scale**: Small callouts on data visualizations
 - Each level serves a performative function rather than a structural one
 
-### Three Layout Modes
+### Ten Core Layout Modes
 
 #### 1. Band Mode
 Full-width colored bands stacking vertically, each containing a complete thought:
@@ -83,6 +96,93 @@ Single word or phrase acts as title card for visual grids:
 ```
 - Minimal text, maximum visual impact
 - Typography as wayfinding rather than content
+
+#### 4. Overlay Mode
+Text directly overlaid on full-screen media with typographic scaffolding:
+```
+[Full-screen GIF/Image]
+    We — all must say — it
+```
+- Text integrated within image space
+- Semi-transparent backgrounds for legibility
+- Scaffolding creates structure over chaos
+
+#### 5. Collage Mode
+Multiple media items in grid with overlaid labels:
+```
+ELECTRICAL          MECHANICAL
+[GIF 1]            [GIF 2]
+[GIF 3]            [GIF 4]
+```
+- Grid-based media layout
+- Labels as categorical markers
+- Mixed media types in single composition
+
+#### 6. Split Screen Mode
+Side-by-side content with central dividing band:
+```
+[Neil deGrasse GIF]  |  I AM HERE TO TALK ABOUT  |  [White space]
+[Jesse Pinkman GIF]  |  SAY IT WITH ME NOW ...    |  [Content area]
+```
+- Dual content streams
+- Central text band as bridge
+- Asymmetric balance
+
+#### 7. Data Visualization Mode
+Charts with vertical text bands and colored annotations:
+```
+BREAKING ║  [Chart with data]  ║ BREAKING
+SCIENCE  ║  Pink callout →    ║ SCIENCE
+NEWS     ║  Blue callout →    ║ NEWS
+```
+- Vertical text columns frame data
+- Colored callout boxes for annotations
+- Mixed static and dynamic elements
+
+#### 8. Stacked Band Mode
+Multiple message bands with different semantic colors:
+```
+═══════════════════════════════════════
+We have moved 2.5 TRILLION TONS OF CO²
+═══════════════════════════════════════
+to the Fast Carbon Cycle
+═══════════════════════════════════════
+from the Slow Carbon Cycle
+═══════════════════════════════════════
+AND WE HAVE TO PUT IT BACK
+═══════════════════════════════════════
+```
+- Each band carries distinct message
+- Color coding for semantic emphasis
+- Progressive information reveal
+
+#### 9. Progressive Build Mode
+Text building progressively on static background:
+```
+[Static Bender GIF throughout]
+Frame 1: (GIF alone)
+Frame 2: — Basically —
+Frame 3: — Basically —
+         I know a few things
+Frame 4: — Basically —
+         I know a few things
+         — about —
+         a few things
+```
+- Static media with dynamic text overlay
+- Text accumulates rather than replaces
+- Creates narrative through addition
+
+#### 10. Mixed Media Mode
+Text interwoven within and around multiple media elements:
+```
+[Diagram 1] ←→ But where ←→ [Diagram 2]
+                  ↓
+           [Central content]
+```
+- Text as connective tissue between media
+- Multiple focal points
+- Non-linear reading paths
 
 ## Creating "Tight Space" Through Typographic Pressure
 
