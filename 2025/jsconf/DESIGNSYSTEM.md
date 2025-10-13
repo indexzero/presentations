@@ -7,6 +7,14 @@ This document captures the motion design and aesthetic principles from the analy
 
 **"Infrastructure as Performance Art"** - Making complex technical topics exciting through deliberate motion design. As Mikeal Rogers would appreciate: it's not about information density, it's about creating an experience where each point lands with physical impact.
 
+### The Variable Line Height Revolution
+**CRITICAL INSIGHT**: Line heights are NOT uniform - they're VARIABLE from line to line to achieve an organic, kinetic feel. This isn't mechanical typography, it's living, breathing text that creates rhythm through intentional variation:
+- Small connector text: line-height 2.0-3.0 (breathing room)
+- Medium emphasis: line-height 1.2-1.5 (normal reading)
+- Large statements: line-height 0.9-1.1 (slight compression)
+- Massive hero text: line-height 0.7-0.85 (extreme compression)
+- This creates a HEARTBEAT rhythm, not robotic spacing
+
 ## Visual Aesthetic
 
 ### Color Palette
@@ -28,6 +36,22 @@ This document captures the motion design and aesthetic principles from the analy
 
 Based on comprehensive analysis of 100+ slide transitions, this presentation uses a sophisticated typographic system where text is treated as discrete, animatable blocks that can be composed in multiple ways. This is pure Atomic Design applied to kinetic typography at scale.
 
+### Typography Molecules Pattern
+Text groups form "molecules" - semantic units with internal rhythm:
+```
+Molecule Example:
+┌─────────────────────────────────┐
+│ Small connector: "Why"          │ line-height: 2.5
+│ MASSIVE HERO: "HELLO THERE."    │ line-height: 0.75
+│ Small connector: "Let's"        │ line-height: 2.5
+│ MASSIVE HERO: "GET STARTED."    │ line-height: 0.75
+└─────────────────────────────────┘
+```
+Each molecule has:
+- **Internal variation**: Different line heights within
+- **External consistency**: Predictable spacing between molecules
+- **Configurable properties**: All aspects can be customized per instance
+
 ### Atomic Components
 
 1. **Word Blocks**: Individual words or short phrases as discrete visual units
@@ -39,11 +63,13 @@ Based on comprehensive analysis of 100+ slide transitions, this presentation use
    - White (#ffffff): Neutral, supporting text
    - Purple gradients: Corporate/intro backgrounds
    - Dark/Black: Separation and visual breaks
-3. **Typographic Scaffolding**: Flexible grid system using em-dashes and spacing
-   - Horizontal connectors between word blocks
-   - Vertical dividers for columns
-   - Invisible scaffolding through consistent spacing
-   - Mixed scaffolding for complex compositions
+3. **Typographic Scaffolding**: CONFIGURABLE dynamic connectors
+   - **Variable width**: 100px-300px depending on text size
+   - **Variable opacity**: 0.2-0.5 based on emphasis
+   - **Variable position**: top/middle/baseline of text
+   - **Selective appearance**: Only between certain elements for rhythm
+   - **Asymmetric patterns**: Different lengths on left/right sides
+   - Creates visual connections WITHOUT boxing in content
 4. **Multi-Directional Compression Zones**:
    - Vertical compression (top/bottom boundaries)
    - Horizontal compression (left/right boundaries)
@@ -298,6 +324,45 @@ Epic:          13-17s      (Why.gif, chalkboard.gif)
 2. **Consistent text timing** (0.5s) creates subconscious rhythm/heartbeat
 3. **Never stop moving** - perpetual motion maintains energy
 4. **0.5 second cadence** - This becomes the presentation's heartbeat
+
+## Design Tokens System (Nicole Sullivan Approved)
+
+### Core Token Categories
+```css
+:root {
+  /* Line Height Scale */
+  --lh-crushed: 0.75;      /* Massive hero text */
+  --lh-compressed: 0.9;     /* Large statements */
+  --lh-normal: 1.2;         /* Standard reading */
+  --lh-loose: 2.5;          /* Small connectors */
+  --lh-breath: 3.0;         /* Maximum spacing */
+
+  /* Letter Spacing Compression */
+  --compress-none: 0;
+  --compress-light: -0.02em;   /* Readable compression */
+  --compress-medium: -0.04em;  /* Noticeable compression */
+  --compress-heavy: -0.08em;   /* Dramatic compression */
+
+  /* Scaffold Configuration */
+  --scaffold-width-min: 100px;
+  --scaffold-width-max: 300px;
+  --scaffold-opacity-min: 0.2;
+  --scaffold-opacity-max: 0.5;
+
+  /* Spacing Rhythm */
+  --space-molecule: 3rem;      /* Between molecules */
+  --space-internal: 0.5rem;    /* Within molecules */
+  --space-compressed: -0.25rem;/* Overlapping elements */
+
+  /* Text Shadow Layers (Lea Verou Spec) */
+  --shadow-glow: 0 0 40px rgba(0,0,0,0.9);
+  --shadow-soft: 0 0 20px rgba(0,0,0,0.8);
+  --shadow-hard: 0 2px 4px rgba(0,0,0,0.7);
+  --shadow-sharp: 0 1px 2px rgba(0,0,0,0.9);
+  --shadow-stack: var(--shadow-glow), var(--shadow-soft),
+                   var(--shadow-hard), var(--shadow-sharp);
+}
+```
 
 ## Implementation in Slidev with Vue 3 Components
 

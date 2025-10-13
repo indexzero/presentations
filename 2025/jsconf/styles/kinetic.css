@@ -1,6 +1,14 @@
-/* Kinetic Typography Utility System */
+/* =========================================
+   KINETIC TYPOGRAPHY DESIGN SYSTEM
+   JSConf Presentation - Honoring Mikeal Rogers
 
-/* Font Face Definitions */
+   Designed by Una Kravets
+   Reviewed by Nicole Sullivan & Lea Verou
+   ========================================= */
+
+/* =========================================
+   FONT FACE DEFINITIONS
+   ========================================= */
 @font-face {
   font-family: 'Tungsten';
   src: url('/sample/fonts/Tungsten-Bold.otf') format('opentype');
@@ -13,165 +21,489 @@
   font-weight: 900;
 }
 
-/* ========================================
-   Compressed Typography System
-   ======================================== */
+/* =========================================
+   DESIGN TOKENS (Nicole Sullivan Approved)
+   ========================================= */
+:root {
+  /* Line Height Scale - VARIABLE for organic rhythm */
+  --lh-crushed: 0.75;      /* Massive hero text */
+  --lh-compressed: 0.9;     /* Large statements */
+  --lh-normal: 1.2;         /* Standard reading */
+  --lh-tight: 1.5;          /* Slight breathing room */
+  --lh-loose: 2.5;          /* Small connectors */
+  --lh-breath: 3.0;         /* Maximum spacing */
+
+  /* Letter Spacing Compression - Readable but impactful */
+  --compress-none: 0;
+  --compress-light: -0.02em;   /* Subtle compression */
+  --compress-medium: -0.04em;  /* Noticeable compression */
+  --compress-heavy: -0.06em;   /* Dramatic compression */
+  --compress-extreme: -0.08em; /* Maximum compression */
+
+  /* Font Size Scale - Responsive with clamp */
+  --size-annotation: clamp(0.875rem, 1.5vw, 1rem);
+  --size-small: clamp(1.5rem, 3vw, 2rem);
+  --size-medium: clamp(2.5rem, 5vw, 4rem);
+  --size-large: clamp(4rem, 8vw, 6rem);
+  --size-massive: clamp(6rem, 12vw, 10rem);
+  --size-ultra: clamp(8rem, 15vw, 16rem);
+
+  /* Scaffold Configuration - Dynamic connectors */
+  --scaffold-width-min: 100px;
+  --scaffold-width-default: 200px;
+  --scaffold-width-max: 300px;
+  --scaffold-opacity-subtle: 0.2;
+  --scaffold-opacity-normal: 0.3;
+  --scaffold-opacity-strong: 0.5;
+  --scaffold-height: 1px;
+
+  /* Spacing Rhythm - Molecule composition */
+  --space-molecule: 3rem;      /* Between molecules */
+  --space-internal: 0.5rem;    /* Within molecules */
+  --space-tight: 0.25rem;      /* Minimal spacing */
+  --space-compressed: -0.25rem;/* Overlapping elements */
+  --space-negative: -0.5rem;   /* Dramatic overlap */
+
+  /* Text Shadow Layers (Lea Verou Spec) - Maximum readability */
+  --shadow-glow: 0 0 40px rgba(0,0,0,0.9);
+  --shadow-soft: 0 0 20px rgba(0,0,0,0.8);
+  --shadow-hard: 0 2px 4px rgba(0,0,0,0.7);
+  --shadow-sharp: 0 1px 2px rgba(0,0,0,0.9);
+  --shadow-stack: var(--shadow-glow), var(--shadow-soft), var(--shadow-hard), var(--shadow-sharp);
+
+  /* Semantic Colors - Vibrating at different emotional frequencies */
+  --color-cyan: #00ffff;     /* Technical/system concepts */
+  --color-pink: #ff006e;     /* Action/energy */
+  --color-green: #00ff00;    /* Success/positive */
+  --color-yellow: #ffff00;   /* Emphasis/attention */
+  --color-purple: #9945ff;   /* Complex/sophisticated */
+  --color-orange: #ff6b35;   /* Urgent/warning */
+  --color-white: #ffffff;    /* Neutral connective */
+  --color-dark: #1a1a1a;     /* Background/separation */
+
+  /* Gradient Backgrounds */
+  --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-pink: linear-gradient(135deg, #ff006e 0%, #ff4458 100%);
+  --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+
+  /* Animation Timing */
+  --duration-heartbeat: 0.5s;
+  --duration-quick: 0.3s;
+  --duration-normal: 0.5s;
+  --duration-slow: 0.75s;
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   TYPOGRAPHY MOLECULES (Composable Units)
+   ========================================= */
+
+/* Base molecule container */
+.k-molecule {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: var(--space-molecule);
+}
+
+/* Molecule variants with internal rhythm */
+.k-molecule--hero-connector {
+  /* Small connector + massive hero pattern */
+  gap: var(--space-tight);
+}
+
+.k-molecule--hero-connector > *:nth-child(odd) {
+  line-height: var(--lh-loose) !important;
+  font-size: var(--size-small) !important;
+  letter-spacing: var(--compress-none) !important;
+  opacity: 0.9;
+}
+
+.k-molecule--hero-connector > *:nth-child(even) {
+  line-height: var(--lh-crushed) !important;
+  font-size: var(--size-massive) !important;
+  letter-spacing: var(--compress-medium) !important;
+}
+
+.k-molecule--stacked {
+  /* Multiple lines with consistent compression */
+  gap: var(--space-internal);
+}
+
+.k-molecule--stacked > * {
+  line-height: var(--lh-compressed) !important;
+  letter-spacing: var(--compress-light) !important;
+}
+
+.k-molecule--progressive {
+  /* Building intensity through size */
+  gap: var(--space-tight);
+}
+
+.k-molecule--progressive > *:nth-child(1) { font-size: var(--size-medium) !important; }
+.k-molecule--progressive > *:nth-child(2) { font-size: var(--size-large) !important; }
+.k-molecule--progressive > *:nth-child(3) { font-size: var(--size-massive) !important; }
+
+/* =========================================
+   TEXT FOUNDATION
+   ========================================= */
+
+/* Base kinetic text - HEAVY and COMPRESSED */
 .k-text {
-  font-family: 'Tungsten', 'GT Walsheim Black', 'Inter', sans-serif !important;
+  font-family: 'Tungsten', 'GT Walsheim Black', 'Inter', system-ui, sans-serif !important;
   font-weight: 900 !important;
-  line-height: 0.9 !important;
   text-transform: uppercase !important;
+  line-height: var(--lh-normal) !important;
+  letter-spacing: var(--compress-none) !important;
+  text-wrap: balance; /* Modern CSS for better line breaks */
 }
 
-.k-compressed {
-  letter-spacing: -0.02em !important;
+/* For GIF overlay readability (Lea Verou's multi-layer approach) */
+.k-text-overlay {
+  text-shadow: var(--shadow-stack) !important;
+  position: relative;
+  z-index: 2;
 }
 
-.k-ultra-compressed {
-  letter-spacing: -0.04em !important;
+/* Alternative backdrop technique for extreme readability */
+.k-text-backdrop::before {
+  content: '';
+  position: absolute;
+  inset: -1em;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.8) 0%,
+    rgba(0,0,0,0.4) 50%,
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* ========================================
-   Semantic Colors
-   ======================================== */
-.k-cyan { color: #00ffff !important; }
-.k-pink { color: #ff006e !important; }
-.k-green { color: #00ff00 !important; }
-.k-yellow { color: #ffff00 !important; }
-.k-purple { color: #9945ff !important; }
-.k-orange { color: #ff6b35 !important; }
-.k-white { color: #ffffff !important; }
-.k-dark { color: #1a1a1a !important; }
+/* =========================================
+   SIZE CLASSES WITH LINE HEIGHT PAIRING
+   ========================================= */
 
-/* ========================================
-   Scale System (Responsive)
-   ======================================== */
-.k-small { font-size: 2rem !important; }
-.k-medium { font-size: 4rem !important; }
-.k-large { font-size: 6rem !important; }
+.k-annotation {
+  font-size: var(--size-annotation) !important;
+  line-height: var(--lh-normal) !important;
+  letter-spacing: var(--compress-none) !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+  opacity: 0.8;
+}
+
+.k-small {
+  font-size: var(--size-small) !important;
+  line-height: var(--lh-loose) !important;
+  letter-spacing: var(--compress-none) !important;
+}
+
+.k-medium {
+  font-size: var(--size-medium) !important;
+  line-height: var(--lh-tight) !important;
+  letter-spacing: var(--compress-light) !important;
+}
+
+.k-large {
+  font-size: var(--size-large) !important;
+  line-height: var(--lh-compressed) !important;
+  letter-spacing: var(--compress-light) !important;
+}
+
 .k-massive {
-  font-size: 10rem !important;
-  letter-spacing: -0.03em !important;
-}
-.k-ultra {
-  font-size: clamp(12rem, 15vw, 16rem) !important;
-  letter-spacing: -0.04em !important;
+  font-size: var(--size-massive) !important;
+  line-height: var(--lh-crushed) !important;
+  letter-spacing: var(--compress-medium) !important;
 }
 
-/* ========================================
-   Scaffolding Lines (Between elements only)
-   ======================================== */
+.k-ultra {
+  font-size: var(--size-ultra) !important;
+  line-height: var(--lh-crushed) !important;
+  letter-spacing: var(--compress-heavy) !important;
+}
+
+/* =========================================
+   COMPRESSION MODIFIERS
+   ========================================= */
+
+.k-compressed-light {
+  letter-spacing: var(--compress-light) !important;
+}
+
+.k-compressed-medium {
+  letter-spacing: var(--compress-medium) !important;
+}
+
+.k-compressed-heavy {
+  letter-spacing: var(--compress-heavy) !important;
+}
+
+.k-compressed-extreme {
+  letter-spacing: var(--compress-extreme) !important;
+}
+
+/* =========================================
+   SEMANTIC COLORS
+   ========================================= */
+
+.k-cyan { color: var(--color-cyan) !important; }
+.k-pink { color: var(--color-pink) !important; }
+.k-green { color: var(--color-green) !important; }
+.k-yellow { color: var(--color-yellow) !important; }
+.k-purple { color: var(--color-purple) !important; }
+.k-orange { color: var(--color-orange) !important; }
+.k-white { color: var(--color-white) !important; }
+.k-dark { color: var(--color-dark) !important; }
+
+/* =========================================
+   SCAFFOLDING SYSTEM (Dynamic Connectors)
+   ========================================= */
+
 .k-scaffold {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-internal);
+  container-type: inline-size; /* Modern container queries */
 }
 
 .k-scaffold > * {
   position: relative;
-  margin: 0.5rem 0 !important;
+  margin: var(--space-internal) 0 !important;
 }
 
-/* Lines only between elements, not on first or last */
+/* Dynamic scaffolding lines - ONLY between middle elements */
+.k-scaffold > *:not(:first-child):not(:last-child) {
+  --scaffold-width: var(--scaffold-width-default);
+  --scaffold-opacity: var(--scaffold-opacity-normal);
+}
+
+/* Horizontal lines extending from text */
 .k-scaffold > *:not(:first-child):not(:last-child)::before,
 .k-scaffold > *:not(:first-child):not(:last-child)::after {
   content: '';
   position: absolute !important;
   top: 50% !important;
-  height: 1px !important;
-  width: 200px !important;
-  background: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-50%);
+  height: var(--scaffold-height) !important;
+  background: rgba(255, 255, 255, var(--scaffold-opacity)) !important;
+  pointer-events: none;
 }
 
 .k-scaffold > *:not(:first-child):not(:last-child)::before {
   right: calc(100% + 2rem) !important;
+  width: var(--scaffold-width) !important;
 }
 
 .k-scaffold > *:not(:first-child):not(:last-child)::after {
   left: calc(100% + 2rem) !important;
+  width: var(--scaffold-width) !important;
 }
 
-/* ========================================
-   Band System
-   ======================================== */
+/* Asymmetric scaffolding for organic feel */
+.k-scaffold--asymmetric > *:nth-child(odd)::before {
+  width: calc(var(--scaffold-width) * 1.2) !important;
+  opacity: calc(var(--scaffold-opacity) * 1.2);
+}
+
+.k-scaffold--asymmetric > *:nth-child(even)::after {
+  width: calc(var(--scaffold-width) * 0.8) !important;
+  opacity: calc(var(--scaffold-opacity) * 0.8);
+}
+
+/* Variable scaffolding based on text size */
+.k-scaffold .k-massive::before,
+.k-scaffold .k-massive::after {
+  --scaffold-width: var(--scaffold-width-max);
+  --scaffold-opacity: var(--scaffold-opacity-strong);
+}
+
+.k-scaffold .k-small::before,
+.k-scaffold .k-small::after {
+  --scaffold-width: var(--scaffold-width-min);
+  --scaffold-opacity: var(--scaffold-opacity-subtle);
+}
+
+/* =========================================
+   BAND SYSTEM (Full-width color blocks)
+   ========================================= */
+
 .k-band {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 2rem;
+  padding: 2rem 3rem;
   text-align: center;
+  position: relative;
 }
 
 .k-band-purple {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: var(--gradient-purple);
+  color: var(--color-white);
 }
 
 .k-band-pink {
-  background: #ff006e;
+  background: var(--color-pink);
+  color: var(--color-white);
 }
 
 .k-band-green {
-  background: #00ff00;
-  color: #000;
+  background: var(--color-green);
+  color: var(--color-dark);
 }
 
 .k-band-yellow {
-  background: #ffff00;
-  color: #000;
+  background: var(--color-yellow);
+  color: var(--color-dark);
 }
 
 .k-band-white {
-  background: #ffffff;
-  color: #000;
+  background: var(--color-white);
+  color: var(--color-dark);
 }
 
 .k-band-dark {
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--gradient-dark);
+  color: var(--color-white);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ========================================
-   GIF Overlay Helpers
-   ======================================== */
+/* =========================================
+   GIF OVERLAY HELPERS
+   ========================================= */
+
 .k-overlay {
   backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem 3rem;
   border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* ========================================
-   Text Shadow for Readability
-   ======================================== */
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+.k-overlay-light {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-dark);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================================
-   Utility Helpers
-   ======================================== */
-.text-center {
-  text-align: center;
+/* =========================================
+   ANIMATION CLASSES (0.5s Heartbeat)
+   ========================================= */
+
+@keyframes k-heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
 }
 
-.mt-8 {
-  margin-top: 2rem;
+@keyframes k-slide-right {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+@keyframes k-slide-up {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-.w-96 {
-  width: 24rem;
+@keyframes k-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+.k-animate-heartbeat {
+  animation: k-heartbeat var(--duration-heartbeat) var(--easing-smooth) infinite;
+  animation-play-state: paused;
+}
+
+.k-animate-heartbeat.is-active,
+.k-animate-heartbeat:hover {
+  animation-play-state: running;
+}
+
+.k-animate-slide-right {
+  animation: k-slide-right var(--duration-normal) var(--easing-bounce);
+}
+
+.k-animate-slide-up {
+  animation: k-slide-up var(--duration-normal) var(--easing-bounce);
+}
+
+.k-animate-fade {
+  animation: k-fade-in var(--duration-slow) var(--easing-smooth);
+}
+
+/* =========================================
+   UTILITY CLASSES
+   ========================================= */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-16 { margin-top: 4rem; }
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-16 { margin-bottom: 4rem; }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.opacity-30 {
-  opacity: 0.3;
+.w-full { width: 100%; }
+.w-96 { width: 24rem; }
+
+.opacity-30 { opacity: 0.3; }
+.opacity-50 { opacity: 0.5; }
+.opacity-80 { opacity: 0.8; }
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@container (max-width: 768px) {
+  .k-scaffold > *:not(:first-child):not(:last-child)::before,
+  .k-scaffold > *:not(:first-child):not(:last-child)::after {
+    width: calc(var(--scaffold-width) * 0.5) !important;
+  }
 }
+
+@supports (text-wrap: balance) {
+  .k-text {
+    text-wrap: balance;
+  }
+}
+
+/* =========================================
+   SLIDEV SPECIFIC OVERRIDES
+   ========================================= */
+
+.slidev-layout {
+  /* Ensure GIF backgrounds work */
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Override Slidev's default text styles in kinetic contexts */
+.slidev-layout .k-molecule * {
+  margin: 0 !important; /* Reset Slidev's paragraph margins */
+  padding: 0 !important;
+}
+
+/* =========================================
+   End of Kinetic Typography System
+
+   "The web isn't finished" - Mikeal Rogers
+   Neither should your slides be static.
+   ========================================= */

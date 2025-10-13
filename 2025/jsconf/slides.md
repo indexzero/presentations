@@ -10,5 +10,5 @@ fonts:
   sans: 'Inter'
   serif: 'Robot Slab'
   mono: 'Fira Code'
-src: ./slides/example-kinetic.md
+src: ./pages/exact-replicas.md
 ---
