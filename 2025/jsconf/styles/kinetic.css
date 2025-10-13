@@ -40,29 +40,41 @@
   --compress-heavy: -0.06em;   /* Dramatic compression */
   --compress-extreme: -0.08em; /* Maximum compression */
 
-  /* Font Size Scale - Responsive with clamp */
-  --size-annotation: clamp(0.875rem, 1.5vw, 1rem);
-  --size-small: clamp(1.5rem, 3vw, 2rem);
-  --size-medium: clamp(2.5rem, 5vw, 4rem);
-  --size-large: clamp(4rem, 8vw, 6rem);
-  --size-massive: clamp(6rem, 12vw, 10rem);
-  --size-ultra: clamp(8rem, 15vw, 16rem);
+  /* Font Size Scale - 5 sizes (sm, md, lg, xl, xxl) */
+  --size-sm: clamp(1.25rem, 2.5vw, 1.75rem);
+  --size-md: clamp(2rem, 4vw, 3rem);
+  --size-lg: clamp(3rem, 6vw, 5rem);
+  --size-xl: clamp(5rem, 10vw, 8rem);
+  --size-xxl: clamp(7rem, 14vw, 12rem);
 
-  /* Scaffold Configuration - Dynamic connectors */
-  --scaffold-width-min: 100px;
-  --scaffold-width-default: 200px;
-  --scaffold-width-max: 300px;
-  --scaffold-opacity-subtle: 0.2;
-  --scaffold-opacity-normal: 0.3;
-  --scaffold-opacity-strong: 0.5;
-  --scaffold-height: 1px;
+  /* Wing/Scaffold Configuration - 5 sizes */
+  --wing-width-sm: 50px;
+  --wing-width-md: 100px;
+  --wing-width-lg: 150px;
+  --wing-width-xl: 200px;
+  --wing-width-xxl: 300px;
+  --wing-opacity: 0.3;
+  --wing-height: 1px;
 
-  /* Spacing Rhythm - Molecule composition */
-  --space-molecule: 3rem;      /* Between molecules */
-  --space-internal: 0.5rem;    /* Within molecules */
-  --space-tight: 0.25rem;      /* Minimal spacing */
-  --space-compressed: -0.25rem;/* Overlapping elements */
-  --space-negative: -0.5rem;   /* Dramatic overlap */
+  /* Line Spacing Scale - 5 sizes */
+  --line-spacing-sm: 0.5rem;
+  --line-spacing-md: 1rem;
+  --line-spacing-lg: 1.5rem;
+  --line-spacing-xl: 2.5rem;
+  --line-spacing-xxl: 4rem;
+
+  /* Space Before/After Scale - 5 sizes */
+  --space-before-sm: 0.25rem;
+  --space-before-md: 0.5rem;
+  --space-before-lg: 1rem;
+  --space-before-xl: 2rem;
+  --space-before-xxl: 3rem;
+
+  --space-after-sm: 0.25rem;
+  --space-after-md: 0.5rem;
+  --space-after-lg: 1rem;
+  --space-after-xl: 2rem;
+  --space-after-xxl: 3rem;
 
   /* Text Shadow Layers (Lea Verou Spec) - Maximum readability */
   --shadow-glow: 0 0 40px rgba(0,0,0,0.9);
@@ -183,44 +195,35 @@
 }
 
 /* =========================================
-   SIZE CLASSES WITH LINE HEIGHT PAIRING
+   SIZE CLASSES - 5 SIZES (sm, md, lg, xl, xxl)
    ========================================= */
 
-.k-annotation {
-  font-size: var(--size-annotation) !important;
-  line-height: var(--lh-normal) !important;
-  letter-spacing: var(--compress-none) !important;
-  text-transform: none !important;
-  font-weight: 400 !important;
-  opacity: 0.8;
-}
-
-.k-small {
-  font-size: var(--size-small) !important;
+.k-text-sm {
+  font-size: var(--size-sm) !important;
   line-height: var(--lh-loose) !important;
   letter-spacing: var(--compress-none) !important;
 }
 
-.k-medium {
-  font-size: var(--size-medium) !important;
-  line-height: var(--lh-tight) !important;
+.k-text-md {
+  font-size: var(--size-md) !important;
+  line-height: var(--lh-normal) !important;
   letter-spacing: var(--compress-light) !important;
 }
 
-.k-large {
-  font-size: var(--size-large) !important;
+.k-text-lg {
+  font-size: var(--size-lg) !important;
   line-height: var(--lh-compressed) !important;
   letter-spacing: var(--compress-light) !important;
 }
 
-.k-massive {
-  font-size: var(--size-massive) !important;
+.k-text-xl {
+  font-size: var(--size-xl) !important;
   line-height: var(--lh-crushed) !important;
   letter-spacing: var(--compress-medium) !important;
 }
 
-.k-ultra {
-  font-size: var(--size-ultra) !important;
+.k-text-xxl {
+  font-size: var(--size-xxl) !important;
   line-height: var(--lh-crushed) !important;
   letter-spacing: var(--compress-heavy) !important;
 }
@@ -500,6 +503,102 @@
   margin: 0 !important; /* Reset Slidev's paragraph margins */
   padding: 0 !important;
 }
+
+/* =========================================
+   ROLE-BASED CLASSES (AI-FIRST)
+   ========================================= */
+
+.k-role-hero {
+  font-size: var(--size-xl) !important;
+  line-height: var(--lh-crushed) !important;
+  letter-spacing: var(--compress-medium) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.k-role-connector {
+  font-size: var(--size-sm) !important;
+  line-height: var(--lh-loose) !important;
+  letter-spacing: var(--compress-none) !important;
+  opacity: 0.9;
+}
+
+.k-role-normal {
+  font-size: var(--size-md) !important;
+  line-height: var(--lh-normal) !important;
+}
+
+/* =========================================
+   WINGS/SCAFFOLDING - 5 SIZES
+   ========================================= */
+
+.k-wing {
+  position: absolute;
+  height: var(--wing-height);
+  background: rgba(255, 255, 255, var(--wing-opacity));
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.k-wing-left {
+  right: calc(100% + 1.5rem);
+}
+
+.k-wing-right {
+  left: calc(100% + 1.5rem);
+}
+
+/* Wing size variants */
+.k-wing-sm { width: var(--wing-width-sm); }
+.k-wing-md { width: var(--wing-width-md); }
+.k-wing-lg { width: var(--wing-width-lg); }
+.k-wing-xl { width: var(--wing-width-xl); }
+.k-wing-xxl { width: var(--wing-width-xxl); }
+
+/* =========================================
+   TEXT ALIGNMENT CLASSES
+   ========================================= */
+
+.k-align-left {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+.k-align-center {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.k-align-right {
+  text-align: right !important;
+  justify-content: flex-end !important;
+}
+
+/* =========================================
+   SPACING MODIFIER CLASSES
+   ========================================= */
+
+/* Line spacing for sections */
+.k-line-spacing-sm { gap: var(--line-spacing-sm) !important; }
+.k-line-spacing-md { gap: var(--line-spacing-md) !important; }
+.k-line-spacing-lg { gap: var(--line-spacing-lg) !important; }
+.k-line-spacing-xl { gap: var(--line-spacing-xl) !important; }
+.k-line-spacing-xxl { gap: var(--line-spacing-xxl) !important; }
+
+/* Space before individual lines */
+.k-space-before-sm { margin-top: var(--space-before-sm) !important; }
+.k-space-before-md { margin-top: var(--space-before-md) !important; }
+.k-space-before-lg { margin-top: var(--space-before-lg) !important; }
+.k-space-before-xl { margin-top: var(--space-before-xl) !important; }
+.k-space-before-xxl { margin-top: var(--space-before-xxl) !important; }
+
+/* Space after individual lines */
+.k-space-after-sm { margin-bottom: var(--space-after-sm) !important; }
+.k-space-after-md { margin-bottom: var(--space-after-md) !important; }
+.k-space-after-lg { margin-bottom: var(--space-after-lg) !important; }
+.k-space-after-xl { margin-bottom: var(--space-after-xl) !important; }
+.k-space-after-xxl { margin-bottom: var(--space-after-xxl) !important; }
 
 /* =========================================
    End of Kinetic Typography System

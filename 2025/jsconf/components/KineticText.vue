@@ -7,12 +7,43 @@
     :initial="initial"
     :enter="enter"
   >
-    <slot />
+    <!-- Single line mode -->
+    <template v-if="!lines">
+      <slot />
+    </template>
+
+    <!-- Multi-line mode with :lines prop -->
+    <template v-else>
+      <div v-for="(line, index) in lines" :key="index"
+        class="k-text-line"
+        :class="[getLineColorClass(line), getLineSizeClass(line)]"
+        v-motion
+        :initial="getLineInitial()"
+        :enter="getLineEnter(index)"
+      >
+        <template v-if="line.dash">
+          <span class="k-dash">{{ line.dash }}</span>
+        </template>
+        {{ line.text }}
+        <template v-if="line.dashAfter">
+          <span class="k-dash">{{ line.dashAfter }}</span>
+        </template>
+      </div>
+    </template>
   </component>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+interface Line {
+  text: string
+  color?: string
+  size?: string
+  compressed?: boolean
+  dash?: string
+  dashAfter?: string
+}
 
 const props = defineProps({
   tag: {
@@ -32,6 +63,10 @@ const props = defineProps({
   delay: {
     type: Number,
     default: 0
+  },
+  lines: {
+    type: Array as () => Line[],
+    default: null
   }
 })
 
@@ -64,4 +99,23 @@ const enter = computed(() => ({
     damping: 25
   }
 }))
+
+// Helper functions for multi-line mode
+const getLineColorClass = (line: Line) => line.color ? `k-${line.color}` : colorClass.value
+const getLineSizeClass = (line: Line) => line.size ? `k-${line.size}` : sizeClass.value
+
+const getLineInitial = () => initial.value
+
+const getLineEnter = (index: number) => ({
+  opacity: 1,
+  x: 0,
+  y: 0,
+  transition: {
+    delay: props.delay + (index * 200),
+    duration: 500,
+    type: 'spring',
+    stiffness: 250,
+    damping: 25
+  }
+})
 </script>
