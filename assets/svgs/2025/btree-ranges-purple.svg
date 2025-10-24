@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <!-- Root node with range indicators -->
+  <g transform="translate(250,50)">
+    <rect x="0" y="0" width="75" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="37" y="25" text-anchor="middle" fill="#A351D4" font-size="11">["af","ch"]</text>
+    <rect x="75" y="0" width="75" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="112" y="25" text-anchor="middle" fill="#A351D4" font-size="11">["ch"]</text>
+    <rect x="150" y="0" width="75" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="187" y="25" text-anchor="middle" fill="#A351D4" font-size="11">["fr","jt"]</text>
+    <rect x="225" y="0" width="75" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="262" y="25" text-anchor="middle" fill="#A351D4" font-size="11">["sp","vi"]</text>
+  </g>
+
+  <!-- Leaf nodes with string keys -->
+  <!-- First leaf node -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"abc"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"cef"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"fhi"</text>
+
+    <rect x="0" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"af"</text>
+    <rect x="40" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"af"</text>
+    <rect x="80" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"ch"</text>
+  </g>
+
+  <!-- Second leaf node -->
+  <g transform="translate(230,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"hkl"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"ino"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"fqr"</text>
+
+    <rect x="0" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"ch"</text>
+    <rect x="40" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"ch"</text>
+    <rect x="80" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"ch"</text>
+  </g>
+
+  <!-- Third leaf node -->
+  <g transform="translate(410,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"mtu"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"owr"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"qza"</text>
+
+    <rect x="0" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"fr"</text>
+    <rect x="40" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"it"</text>
+    <rect x="80" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"jt"</text>
+  </g>
+
+  <!-- Fourth leaf node -->
+  <g transform="translate(590,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"tdx"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"xfq"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#A351D4" font-size="13">"zul"</text>
+
+    <rect x="0" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="20" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"sp"</text>
+    <rect x="40" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"vi"</text>
+    <rect x="80" y="40" width="40" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="100" y="65" text-anchor="middle" fill="#A351D4" font-size="13">"vi"</text>
+  </g>
+
+  <!-- Connecting lines from root to leaf nodes -->
+  <path d="M 287 90 L 110 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none" marker-end="url(#arrowhead-purple-btree)"/>
+  <path d="M 325 90 L 290 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none" marker-end="url(#arrowhead-purple-btree)"/>
+  <path d="M 400 90 L 470 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none" marker-end="url(#arrowhead-purple-btree)"/>
+  <path d="M 475 90 L 650 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none" marker-end="url(#arrowhead-purple-btree)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead-purple-btree" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="320" text-anchor="middle" fill="#A351D4" font-size="14" font-weight="bold">B+ Tree with Range Indicators</text>
+</svg>

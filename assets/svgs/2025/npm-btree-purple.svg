@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">npm Registry dependedUpon View - B+ Tree Index</text>
+
+  <!-- Root node with compound keys -->
+  <g transform="translate(350,70)">
+    <rect x="0" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="40" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["express",</text>
+    <rect x="80" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="120" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["lodash",</text>
+    <rect x="160" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["react",</text>
+  </g>
+
+  <!-- Leaf nodes with full compound keys [dep, doc._id, desc] -->
+  <!-- First leaf - packages depending on async/axios -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["async", "npm-test",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Test harness"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["axios", "api-client",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"API wrapper"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["axios", "weather-app",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Weather dashboard"]</text>
+  </g>
+
+  <!-- Second leaf - packages depending on express -->
+  <g transform="translate(230,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["express", "blog-api",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Blog REST API"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["express", "chat-server",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"Real-time chat"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["express", "shop-backend",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"E-commerce API"]</text>
+  </g>
+
+  <!-- Third leaf - packages depending on lodash -->
+  <g transform="translate(410,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "data-tools",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Data utilities"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "parser-lib",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"JSON parser"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "validator",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Form validation"]</text>
+  </g>
+
+  <!-- Fourth leaf - packages depending on react -->
+  <g transform="translate(590,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["react", "admin-ui",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Admin panel"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["react", "dashboard",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"Analytics UI"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["react", "todo-app",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Task manager"]</text>
+  </g>
+
+  <!-- Fifth leaf - more packages -->
+  <g transform="translate(770,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["vue", "spa-app",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Single page app"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["webpack", "bundler",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"Asset bundler"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["webpack", "my-cli",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Build tool"]</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <path d="M 390 110 L 110 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 430 110 L 290 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 470 110 L 470 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 510 110 L 650 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 550 110 L 830 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Reduce value indicators -->
+  <g transform="translate(50,320)">
+    <text x="60" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-style="italic">1</text>
+    <text x="180" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-style="italic">1</text>
+    <text x="290" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-weight="bold">3</text>
+    <text x="410" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-weight="bold">3</text>
+    <text x="530" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-weight="bold">3</text>
+    <text x="650" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-weight="bold">3</text>
+    <text x="770" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-style="italic">1</text>
+    <text x="830" y="20" text-anchor="middle" fill="#A351D4" font-size="11" font-weight="bold">2</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50,360)">
+    <text x="0" y="0" fill="#A351D4" font-size="11" font-weight="bold">emit([dep, doc._id, desc], 1)</text>
+    <text x="0" y="15" fill="#A351D4" font-size="10">Key: [dependency, dependent, description]</text>
+    <text x="0" y="30" fill="#A351D4" font-size="10">reduce: "_sum" (counts packages depending on each)</text>
+  </g>
+</svg>

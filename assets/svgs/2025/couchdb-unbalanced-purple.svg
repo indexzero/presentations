@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">Unbalanced B+ Tree (Sequential Inserts)</text>
+
+  <!-- Root node - heavily skewed -->
+  <g transform="translate(200,70)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">aa</text>
+  </g>
+
+  <!-- Second level - mostly left side -->
+  <g transform="translate(80,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">a</text>
+  </g>
+
+  <g transform="translate(320,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="11">aaa</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="11">aaaa</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#A351D4" font-size="9">aaaaa</text>
+  </g>
+
+  <!-- Third level - extremely deep on left -->
+  <g transform="translate(30,230)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">a</text>
+  </g>
+
+  <!-- Fourth level - even deeper -->
+  <g transform="translate(30,310)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">a</text>
+  </g>
+
+  <!-- Fifth level - maximum depth -->
+  <g transform="translate(30,390)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">a</text>
+  </g>
+
+  <!-- Right side sparse nodes -->
+  <g transform="translate(500,230)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="14">b</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="14">c</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#A351D4" font-size="14">d</text>
+  </g>
+
+  <!-- Bottom sequence showing the imbalance -->
+  <g transform="translate(30,460)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="12">a</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="12">aa</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#A351D4" font-size="10">aaa</text>
+    <rect x="105" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="120" y="20" text-anchor="middle" fill="#A351D4" font-size="9">aaaa</text>
+    <rect x="140" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="155" y="20" text-anchor="middle" fill="#A351D4" font-size="8">aaaaa</text>
+    <rect x="175" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="190" y="20" text-anchor="middle" fill="#A351D4" font-size="7">aaaaaa</text>
+
+    <!-- Gap to show imbalance -->
+    <rect x="350" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="365" y="20" text-anchor="middle" fill="#A351D4" font-size="12">b</text>
+    <rect x="385" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="400" y="20" text-anchor="middle" fill="#A351D4" font-size="12">c</text>
+    <rect x="420" y="0" width="30" height="30" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="435" y="20" text-anchor="middle" fill="#A351D4" font-size="12">d</text>
+  </g>
+
+  <!-- Connecting lines showing the imbalance -->
+  <path d="M 215 100 L 95 150" stroke="#A351D4" stroke-width="2" fill="none"/>
+  <path d="M 215 100 L 335 150" stroke="#A351D4" stroke-width="2" fill="none"/>
+
+  <path d="M 95 180 L 45 230" stroke="#A351D4" stroke-width="2" fill="none"/>
+  <path d="M 45 260 L 45 310" stroke="#A351D4" stroke-width="2" fill="none"/>
+  <path d="M 45 340 L 45 390" stroke="#A351D4" stroke-width="2" fill="none"/>
+
+  <path d="M 370 180 L 530 230" stroke="#A351D4" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Warning indicator -->
+  <g transform="translate(600,100)">
+    <path d="M 0,0 L 30,0 L 15,30 Z" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#A351D4" font-size="16">!</text>
+  </g>
+  <text x="650" y="115" fill="#A351D4" font-size="12">Poor Performance</text>
+  <text x="650" y="130" fill="#A351D4" font-size="12">Deep traversal needed</text>
+
+  <!-- Arrow showing problem area -->
+  <path d="M 70 250 L 100 250" stroke="#A351D4" stroke-width="2" fill="none" marker-end="url(#arrowhead-purple-unbal)"/>
+  <text x="110" y="255" fill="#A351D4" font-size="11" font-style="italic">Extremely deep path</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead-purple-unbal" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <!-- Root node -->
+  <g transform="translate(300,50)">
+    <rect x="0" y="0" width="60" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <rect x="60" y="0" width="60" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <rect x="120" y="0" width="60" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+  </g>
+
+  <!-- Range selection highlight -->
+  <rect x="70" y="190" width="260" height="60" rx="10" fill="#1FFFA5" opacity="0.2" stroke="#1FFFA5" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Leaf nodes with string keys -->
+  <!-- First leaf node -->
+  <g transform="translate(80,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"af"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"af"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"th"</text>
+  </g>
+
+  <!-- Second leaf node -->
+  <g transform="translate(250,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"ch"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"ch"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"dr"</text>
+  </g>
+
+  <!-- Third leaf node -->
+  <g transform="translate(420,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"fr"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"it"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"jt"</text>
+  </g>
+
+  <!-- Fourth leaf node -->
+  <g transform="translate(590,200)">
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="20" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"sp"</text>
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"vi"</text>
+    <rect x="80" y="0" width="40" height="40" fill="none" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#1FFFA5" font-size="14">"vi"</text>
+  </g>
+
+  <!-- Connecting lines from root to leaf nodes -->
+  <path d="M 330 90 L 140 200" stroke="#1FFFA5" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 360 90 L 310 200" stroke="#1FFFA5" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 420 90 L 480 200" stroke="#1FFFA5" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 450 90 L 650 200" stroke="#1FFFA5" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Leaf level indicators (sequential access) -->
+  <g transform="translate(80,260)">
+    <text x="60" y="20" text-anchor="middle" fill="#1FFFA5" font-size="12" font-style="italic">1</text>
+    <text x="230" y="20" text-anchor="middle" fill="#1FFFA5" font-size="12" font-style="italic">1</text>
+    <text x="400" y="20" text-anchor="middle" fill="#1FFFA5" font-size="12" font-style="italic">1</text>
+    <text x="570" y="20" text-anchor="middle" fill="#1FFFA5" font-size="12" font-style="italic">1</text>
+  </g>
+
+  <!-- Range query label -->
+  <text x="200" y="310" text-anchor="middle" fill="#1FFFA5" font-size="14" font-weight="bold">Range Query: "af" to "dr"</text>
+</svg>

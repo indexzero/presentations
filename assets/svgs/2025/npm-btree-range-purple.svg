@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">Query: "What packages depend on express?"</text>
+
+  <!-- Root node with compound keys -->
+  <g transform="translate(350,70)">
+    <rect x="0" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="40" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["express",</text>
+    <rect x="80" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="120" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["lodash",</text>
+    <rect x="160" y="0" width="80" height="40" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#A351D4" font-size="10">["react",</text>
+  </g>
+
+  <!-- Range selection highlight -->
+  <rect x="220" y="190" width="140" height="120" rx="10" fill="#A351D4" opacity="0.2" stroke="#A351D4" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Leaf nodes -->
+  <!-- First leaf -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["async", "npm-test",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Test harness"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["axios", "api-client",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"API wrapper"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["axios", "weather-app",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Weather dashboard"]</text>
+  </g>
+
+  <!-- Second leaf - HIGHLIGHTED -->
+  <g transform="translate(230,200)">
+    <rect x="0" y="0" width="120" height="35" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">["express", "blog-api",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">"Blog REST API"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">["express", "chat-server",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">"Real-time chat"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">["express", "shop-backend",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9" font-weight="bold">"E-commerce API"]</text>
+  </g>
+
+  <!-- Third leaf -->
+  <g transform="translate(410,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "data-tools",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Data utilities"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "parser-lib",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"JSON parser"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["lodash", "validator",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Form validation"]</text>
+  </g>
+
+  <!-- Fourth leaf -->
+  <g transform="translate(590,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["react", "admin-ui",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Admin panel"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["react", "dashboard",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"Analytics UI"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["react", "todo-app",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Task manager"]</text>
+  </g>
+
+  <!-- Fifth leaf -->
+  <g transform="translate(770,200)">
+    <rect x="0" y="0" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="15" text-anchor="middle" fill="#A351D4" font-size="9">["vue", "spa-app",</text>
+    <text x="60" y="27" text-anchor="middle" fill="#A351D4" font-size="9">"Single page app"]</text>
+
+    <rect x="0" y="35" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" fill="#A351D4" font-size="9">["webpack", "bundler",</text>
+    <text x="60" y="62" text-anchor="middle" fill="#A351D4" font-size="9">"Asset bundler"]</text>
+
+    <rect x="0" y="70" width="120" height="35" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#A351D4" font-size="9">["webpack", "my-cli",</text>
+    <text x="60" y="97" text-anchor="middle" fill="#A351D4" font-size="9">"Build tool"]</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <path d="M 390 110 L 110 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 430 110 L 290 200" stroke="#A351D4" stroke-width="2" fill="none"/>
+  <path d="M 470 110 L 470 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 510 110 L 650 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 550 110 L 830 200" stroke="#A351D4" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Query range indicator -->
+  <g transform="translate(230,330)">
+    <path d="M 0 0 L 120 0" stroke="#A351D4" stroke-width="2" marker-end="url(#arrowhead-purple-npm)"/>
+    <text x="60" y="-5" text-anchor="middle" fill="#A351D4" font-size="12" font-weight="bold">startkey: ["express"]</text>
+    <text x="60" y="20" text-anchor="middle" fill="#A351D4" font-size="12" font-weight="bold">endkey: ["express", {}]</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-purple-npm" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+
+  <!-- Result -->
+  <g transform="translate(50,360)">
+    <text x="0" y="0" fill="#A351D4" font-size="11" font-weight="bold">Result: 3 packages depend on express</text>
+    <text x="0" y="15" fill="#A351D4" font-size="10">• blog-api - "Blog REST API"</text>
+    <text x="0" y="30" fill="#A351D4" font-size="10">• chat-server - "Real-time chat"</text>
+    <text x="0" y="45" fill="#A351D4" font-size="10">• shop-backend - "E-commerce API"</text>
+  </g>
+</svg>

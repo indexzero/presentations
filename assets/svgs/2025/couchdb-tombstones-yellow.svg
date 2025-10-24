@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#F2E55C" font-size="16" font-weight="bold">B+ Tree Needing Compaction (Tombstones)</text>
+
+  <!-- Legend -->
+  <g transform="translate(600,60)">
+    <rect x="0" y="0" width="20" height="20" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="1"/>
+    <text x="25" y="15" fill="#F2E55C" font-size="12">= Tombstone (deleted)</text>
+    <rect x="0" y="25" width="20" height="20" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="25" y="40" fill="#F2E55C" font-size="12">= Active document</text>
+  </g>
+
+  <!-- Top level node -->
+  <g transform="translate(350,70)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">7</text>
+    <rect x="35" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">11</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">15</text>
+  </g>
+
+  <!-- Second level nodes with tombstones -->
+  <g transform="translate(100,150)">
+    <rect x="0" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">4</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">5</text>
+    <rect x="70" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">6</text>
+  </g>
+
+  <g transform="translate(250,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">8</text>
+    <rect x="35" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">9</text>
+    <rect x="70" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">10</text>
+  </g>
+
+  <g transform="translate(400,150)">
+    <rect x="0" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">12</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">13</text>
+    <rect x="70" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">14</text>
+  </g>
+
+  <g transform="translate(550,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">16</text>
+    <rect x="35" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">17</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">18</text>
+  </g>
+
+  <!-- Bottom sequence with many tombstones -->
+  <g transform="translate(30,350)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">1</text>
+    <rect x="35" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">2</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">3</text>
+    <rect x="105" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="120" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">4</text>
+    <rect x="140" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="155" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">5</text>
+    <rect x="175" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="190" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">6</text>
+    <rect x="210" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="225" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">7</text>
+    <rect x="245" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="260" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">8</text>
+    <rect x="280" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="295" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">9</text>
+    <rect x="315" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="330" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">10</text>
+    <rect x="350" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="365" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">11</text>
+    <rect x="385" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="400" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">12</text>
+    <rect x="420" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="435" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">13</text>
+    <rect x="455" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="470" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">14</text>
+    <rect x="490" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="505" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">15</text>
+    <rect x="525" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="540" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">16</text>
+    <rect x="560" y="0" width="30" height="30" fill="#F2E55C" opacity="0.2" stroke="#F2E55C" stroke-width="2"/>
+    <text x="575" y="20" text-anchor="middle" fill="#F2E55C" font-size="14" text-decoration="line-through">17</text>
+    <rect x="595" y="0" width="30" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="610" y="20" text-anchor="middle" fill="#F2E55C" font-size="14">18</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <path d="M 365 100 L 150 150" stroke="#F2E55C" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 385 100 L 300 150" stroke="#F2E55C" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 400 100 L 450 150" stroke="#F2E55C" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 435 100 L 600 150" stroke="#F2E55C" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Disk space indicator -->
+  <g transform="translate(50,230)">
+    <rect x="0" y="0" width="200" height="30" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <rect x="0" y="0" width="140" height="30" fill="#F2E55C" opacity="0.2"/>
+    <rect x="0" y="0" width="60" height="30" fill="#F2E55C" opacity="0.5"/>
+    <text x="105" y="20" text-anchor="middle" fill="#F2E55C" font-size="12">70% wasted space</text>
+  </g>
+  <text x="50" y="220" fill="#F2E55C" font-size="12" font-weight="bold">Disk Usage:</text>
+
+  <!-- Statistics box -->
+  <g transform="translate(500,250)">
+    <rect x="0" y="0" width="200" height="80" fill="none" stroke="#F2E55C" stroke-width="2"/>
+    <text x="10" y="20" fill="#F2E55C" font-size="12" font-weight="bold">File Statistics:</text>
+    <text x="10" y="40" fill="#F2E55C" font-size="11">Active docs: 8 (30%)</text>
+    <text x="10" y="55" fill="#F2E55C" font-size="11">Tombstones: 19 (70%)</text>
+    <text x="10" y="70" fill="#F2E55C" font-size="11">Needs compaction!</text>
+  </g>
+
+  <!-- Arrow pointing to problem -->
+  <path d="M 300 280 L 300 340" stroke="#F2E55C" stroke-width="2" fill="none" marker-end="url(#arrowhead-yellow-tomb)"/>
+  <text x="320" y="300" fill="#F2E55C" font-size="11" font-style="italic">Many tombstones</text>
+  <text x="320" y="315" fill="#F2E55C" font-size="11" font-style="italic">consuming space</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead-yellow-tomb" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#F2E55C"/>
+    </marker>
+  </defs>
+</svg>

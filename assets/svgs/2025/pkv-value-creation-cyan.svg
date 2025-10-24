@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" fill="#1FFFA5" font-size="16" font-weight="bold">PKV-VALUE Creation Process</text>
+
+  <!-- Input Value -->
+  <g transform="translate(150,70)">
+    <rect x="0" y="0" width="200" height="40" rx="5" fill="#1FFFA5" opacity="0.1" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="100" y="20" text-anchor="middle" fill="#1FFFA5" font-size="11" font-weight="bold">Value Data</text>
+    <text x="100" y="35" text-anchor="middle" fill="#1FFFA5" font-size="10">"Mikeal Rogers"</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="250" y1="110" x2="250" y2="140" stroke="#1FFFA5" stroke-width="1.5" marker-end="url(#arrowhead-cyan-val)"/>
+
+  <!-- Step 1: Hash the value -->
+  <g transform="translate(200,140)">
+    <rect x="0" y="0" width="100" height="30" rx="5" fill="#1FFFA5" opacity="0.15" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#1FFFA5" font-size="11">H(value)</text>
+  </g>
+
+  <!-- Hash result -->
+  <g transform="translate(180,180)">
+    <rect x="0" y="0" width="140" height="25" rx="3" fill="#1FFFA5" stroke="#1FFFA5" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="70" y="17" text-anchor="middle" fill="white" font-size="9" font-family="monospace">0x7E2A...</text>
+  </g>
+
+  <!-- PKV-KEY input -->
+  <g transform="translate(50,250)">
+    <rect x="0" y="0" width="120" height="30" rx="5" fill="#1FFFA5" opacity="0.05" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="60" y="20" text-anchor="middle" fill="#1FFFA5" font-size="10">PKV-KEY</text>
+  </g>
+
+  <!-- Arrows converging -->
+  <!-- From value hash -->
+  <line x1="250" y1="205" x2="250" y2="290" stroke="#1FFFA5" stroke-width="1.5"/>
+  <!-- From PKV-KEY -->
+  <line x1="170" y1="265" x2="230" y2="265" stroke="#1FFFA5" stroke-width="1.5"/>
+  <line x1="230" y1="265" x2="230" y2="290" stroke="#1FFFA5" stroke-width="1.5"/>
+
+  <!-- Step 2: Combine and hash -->
+  <g transform="translate(175,290)">
+    <rect x="0" y="0" width="150" height="30" rx="5" fill="#1FFFA5" opacity="0.2" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" fill="#1FFFA5" font-size="11">H(value + PKV-KEY)</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="250" y1="320" x2="250" y2="350" stroke="#1FFFA5" stroke-width="1.5" marker-end="url(#arrowhead-cyan-val)"/>
+
+  <!-- Final PKV-VALUE -->
+  <g transform="translate(150,350)">
+    <rect x="0" y="0" width="200" height="35" rx="5" fill="#1FFFA5" opacity="0.25" stroke="#1FFFA5" stroke-width="3"/>
+    <text x="100" y="15" text-anchor="middle" fill="#1FFFA5" font-size="12" font-weight="bold">PKV-VALUE</text>
+    <text x="100" y="28" text-anchor="middle" fill="#1FFFA5" font-size="10" font-family="monospace">0x9A8E5F2D...</text>
+  </g>
+
+  <!-- Process explanation -->
+  <g transform="translate(320,250)">
+    <rect x="0" y="0" width="160" height="80" rx="5" fill="none" stroke="#1FFFA5" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="80" y="20" text-anchor="middle" fill="#1FFFA5" font-size="10" font-weight="bold">Process:</text>
+    <text x="10" y="40" fill="#1FFFA5" font-size="9">1. Hash the value data</text>
+    <text x="10" y="55" fill="#1FFFA5" font-size="9">2. Combine with PKV-KEY</text>
+    <text x="10" y="70" fill="#1FFFA5" font-size="9">3. Hash the combination</text>
+  </g>
+
+  <!-- Properties -->
+  <g transform="translate(50,420)">
+    <rect x="0" y="0" width="400" height="50" rx="5" fill="#1FFFA5" opacity="0.05" stroke="#1FFFA5" stroke-width="2"/>
+    <text x="200" y="20" text-anchor="middle" fill="#1FFFA5" font-size="11" font-weight="bold">Properties:</text>
+    <text x="20" y="40" fill="#1FFFA5" font-size="10">• Deterministic: Same value + key = same PKV-VALUE</text>
+    <text x="220" y="40" fill="#1FFFA5" font-size="10">• Bound to PKV-KEY</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-cyan-val" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#1FFFA5"/>
+    </marker>
+  </defs>
+</svg>
