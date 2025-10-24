@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600">
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">PKV-KEY Creation Process</text>
+
+  <!-- Input sequence -->
+  <g transform="translate(100,70)">
+    <rect x="0" y="0" width="100" height="30" rx="5" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="12">"twitter.com"</text>
+
+    <rect x="100" y="0" width="100" height="30" rx="5" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="150" y="20" text-anchor="middle" fill="#A351D4" font-size="12">"@mikeal"</text>
+
+    <rect x="200" y="0" width="100" height="30" rx="5" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="250" y="20" text-anchor="middle" fill="#A351D4" font-size="12">"fullname"</text>
+  </g>
+
+  <!-- Step 1: Double hash first element -->
+  <g transform="translate(100,150)">
+    <line x1="50" y1="-30" x2="50" y2="0" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-pkv)"/>
+
+    <rect x="0" y="0" width="100" height="30" rx="5" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="11">H("twitter.com")</text>
+
+    <line x1="50" y1="30" x2="50" y2="60" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-pkv)"/>
+
+    <rect x="0" y="60" width="100" height="30" rx="5" fill="#A351D4" opacity="0.2" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="80" text-anchor="middle" fill="#A351D4" font-size="11">H(H(...))</text>
+
+    <rect x="-20" y="100" width="140" height="25" rx="3" fill="#A351D4" stroke="#A351D4" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="50" y="116" text-anchor="middle" fill="white" font-size="9" font-family="monospace">0xA3F2...</text>
+  </g>
+
+  <!-- Step 2: Combine with second element -->
+  <g transform="translate(100,300)">
+    <!-- Line from previous result -->
+    <line x1="50" y1="-75" x2="50" y2="-30" stroke="#A351D4" stroke-width="1.5"/>
+
+    <!-- Line from @mikeal element -->
+    <line x1="150" y1="-200" x2="150" y2="-40" stroke="#A351D4" stroke-width="1.5"/>
+    <line x1="150" y1="-40" x2="80" y2="-40" stroke="#A351D4" stroke-width="1.5"/>
+    <line x1="80" y1="-40" x2="80" y2="-30" stroke="#A351D4" stroke-width="1.5"/>
+
+    <rect x="25" y="-30" width="50" height="20" rx="3" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="-15" text-anchor="middle" fill="#A351D4" font-size="10">Combine</text>
+
+    <line x1="50" y1="-10" x2="50" y2="20" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-pkv)"/>
+
+    <rect x="0" y="20" width="100" height="30" rx="5" fill="#A351D4" opacity="0.2" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="40" text-anchor="middle" fill="#A351D4" font-size="11">H(combined)</text>
+
+    <rect x="-20" y="60" width="140" height="25" rx="3" fill="#A351D4" stroke="#A351D4" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="50" y="76" text-anchor="middle" fill="white" font-size="9" font-family="monospace">0xB7E9...</text>
+  </g>
+
+  <!-- Step 3: Combine with third element -->
+  <g transform="translate(100,420)">
+    <!-- Line from previous result -->
+    <line x1="50" y1="-75" x2="50" y2="-30" stroke="#A351D4" stroke-width="1.5"/>
+
+    <!-- Line from fullname element -->
+    <line x1="250" y1="-320" x2="250" y2="-40" stroke="#A351D4" stroke-width="1.5"/>
+    <line x1="250" y1="-40" x2="80" y2="-40" stroke="#A351D4" stroke-width="1.5"/>
+    <line x1="80" y1="-40" x2="80" y2="-30" stroke="#A351D4" stroke-width="1.5"/>
+
+    <rect x="25" y="-30" width="50" height="20" rx="3" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="-15" text-anchor="middle" fill="#A351D4" font-size="10">Combine</text>
+
+    <line x1="50" y1="-10" x2="50" y2="20" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-pkv)"/>
+
+    <rect x="0" y="20" width="100" height="30" rx="5" fill="#A351D4" opacity="0.3" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="40" text-anchor="middle" fill="#A351D4" font-size="11">H(combined)</text>
+  </g>
+
+  <!-- Final PKV-KEY -->
+  <g transform="translate(50,520)">
+    <line x1="100" y1="-50" x2="100" y2="0" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-pkv)"/>
+    <rect x="0" y="0" width="200" height="35" rx="5" fill="#A351D4" opacity="0.2" stroke="#A351D4" stroke-width="3"/>
+    <text x="100" y="15" text-anchor="middle" fill="#A351D4" font-size="12" font-weight="bold">PKV-KEY</text>
+    <text x="100" y="28" text-anchor="middle" fill="#A351D4" font-size="10" font-family="monospace">0xC4D2F8A9B1E7...</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-cyan-pkv" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <g transform="translate(320,200)">
+    <text x="0" y="0" fill="#A351D4" font-size="10" font-weight="bold">Process:</text>
+    <text x="0" y="15" fill="#A351D4" font-size="9">1. Double-hash first</text>
+    <text x="0" y="30" fill="#A351D4" font-size="9">2. Combine + hash</text>
+    <text x="0" y="45" fill="#A351D4" font-size="9">3. Repeat for each</text>
+    <text x="0" y="60" fill="#A351D4" font-size="9">4. Final = PKV-KEY</text>
+  </g>
+</svg>

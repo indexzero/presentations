@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Top level node -->
+  <g transform="translate(350,50)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">7</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">11</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">15</text>
+  </g>
+
+  <!-- Second level nodes -->
+  <g transform="translate(100,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">4</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">5</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">6</text>
+  </g>
+
+  <g transform="translate(250,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">8</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">9</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">10</text>
+  </g>
+
+  <g transform="translate(400,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">12</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">13</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">14</text>
+  </g>
+
+  <g transform="translate(550,150)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">16</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">17</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">18</text>
+  </g>
+
+  <!-- Third level nodes (leaf nodes) -->
+  <g transform="translate(30,250)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">1</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">2</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">3</text>
+  </g>
+
+  <g transform="translate(180,250)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+  </g>
+
+  <!-- Bottom sequence -->
+  <g transform="translate(30,350)">
+    <rect x="0" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="15" y="20" text-anchor="middle" fill="#FF0000" font-size="14">1</text>
+    <rect x="35" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#FF0000" font-size="14">2</text>
+    <rect x="70" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#FF0000" font-size="14">3</text>
+    <rect x="105" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="120" y="20" text-anchor="middle" fill="#FF0000" font-size="14">4</text>
+    <rect x="140" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="155" y="20" text-anchor="middle" fill="#FF0000" font-size="14">5</text>
+    <rect x="175" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="190" y="20" text-anchor="middle" fill="#FF0000" font-size="14">6</text>
+    <rect x="210" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="225" y="20" text-anchor="middle" fill="#FF0000" font-size="14">7</text>
+    <rect x="245" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="260" y="20" text-anchor="middle" fill="#FF0000" font-size="14">8</text>
+    <rect x="280" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="295" y="20" text-anchor="middle" fill="#FF0000" font-size="14">9</text>
+    <rect x="315" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="330" y="20" text-anchor="middle" fill="#FF0000" font-size="14">10</text>
+    <rect x="350" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="365" y="20" text-anchor="middle" fill="#FF0000" font-size="14">11</text>
+    <rect x="385" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="400" y="20" text-anchor="middle" fill="#FF0000" font-size="14">12</text>
+    <rect x="420" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="435" y="20" text-anchor="middle" fill="#FF0000" font-size="14">13</text>
+    <rect x="455" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="470" y="20" text-anchor="middle" fill="#FF0000" font-size="14">14</text>
+    <rect x="490" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="505" y="20" text-anchor="middle" fill="#FF0000" font-size="14">15</text>
+    <rect x="525" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="540" y="20" text-anchor="middle" fill="#FF0000" font-size="14">16</text>
+    <rect x="560" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="575" y="20" text-anchor="middle" fill="#FF0000" font-size="14">17</text>
+    <rect x="595" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2"/>
+    <text x="610" y="20" text-anchor="middle" fill="#FF0000" font-size="14">18</text>
+    <rect x="630" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="645" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+    <rect x="665" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="680" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+    <rect x="700" y="0" width="30" height="30" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="715" y="20" text-anchor="middle" fill="#FF0000" font-size="14">...</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <path d="M 365 80 L 150 150" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 385 80 L 300 150" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 400 80 L 450 150" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 435 80 L 600 150" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <path d="M 115 180 L 75 250" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Arrow pointing down -->
+  <path d="M 225 295 L 225 330" stroke="#FF0000" stroke-width="3" fill="none" marker-end="url(#arrowhead-red)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#FF0000"/>
+    </marker>
+  </defs>
+
+  <!-- Text label -->
+  <text x="450" y="240" fill="#FF0000" font-size="14" font-style="italic">New docs go here</text>
+  <path d="M 440 245 L 340 260 L 270 265" stroke="#FF0000" stroke-width="1.5" fill="none" marker-end="url(#arrowhead-red)"/>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">Time Agnostic Signatures</text>
+
+  <!-- Key Pair -->
+  <g transform="translate(250,70)">
+    <rect x="0" y="0" width="80" height="30" rx="5" fill="#A351D4" opacity="0.2" stroke="#A351D4" stroke-width="2"/>
+    <text x="10" y="20" fill="#A351D4" font-size="11">🔒</text>
+    <text x="25" y="20" fill="#A351D4" font-size="10">Private Key</text>
+
+    <rect x="120" y="0" width="80" height="30" rx="5" fill="none" stroke="#A351D4" stroke-width="2"/>
+    <text x="130" y="20" fill="#A351D4" font-size="11">🔓</text>
+    <text x="145" y="20" fill="#A351D4" font-size="10">Public Key</text>
+  </g>
+
+  <!-- Three parallel signing operations -->
+
+  <!-- PKV-KEY Signing -->
+  <g transform="translate(50,150)">
+    <text x="75" y="-5" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">PKV-KEY</text>
+    <rect x="0" y="0" width="150" height="30" rx="5" fill="#A351D4" opacity="0.05" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">0xC4D2F8A9...</text>
+
+    <path d="M 75 30 L 75 60" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-sig)"/>
+    <text x="90" y="50" fill="#A351D4" font-size="9">+ 🔒</text>
+
+    <path d="M 0 60 L 150 60 L 125 90 L 25 90 Z" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="80" text-anchor="middle" fill="#A351D4" font-size="10">Sign</text>
+
+    <rect x="25" y="110" width="100" height="25" rx="5" fill="#A351D4" opacity="0.15" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="127" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">Sig(KEY)</text>
+  </g>
+
+  <!-- PKV-VALUE Signing -->
+  <g transform="translate(275,150)">
+    <text x="75" y="-5" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">PKV-VALUE</text>
+    <rect x="0" y="0" width="150" height="30" rx="5" fill="#A351D4" opacity="0.05" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">0x9A8E6D2C...</text>
+
+    <path d="M 75 30 L 75 60" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-sig)"/>
+    <text x="90" y="50" fill="#A351D4" font-size="9">+ 🔒</text>
+
+    <path d="M 0 60 L 150 60 L 125 90 L 25 90 Z" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="80" text-anchor="middle" fill="#A351D4" font-size="10">Sign</text>
+
+    <rect x="25" y="110" width="100" height="25" rx="5" fill="#A351D4" opacity="0.15" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="127" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">Sig(VALUE)</text>
+  </g>
+
+  <!-- PKV-KV Signing -->
+  <g transform="translate(500,150)">
+    <text x="75" y="-5" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">PKV-KV</text>
+    <rect x="0" y="0" width="150" height="30" rx="5" fill="#A351D4" opacity="0.05" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">0x5E7C3A9F...</text>
+
+    <path d="M 75 30 L 75 60" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-sig)"/>
+    <text x="90" y="50" fill="#A351D4" font-size="9">+ 🔒</text>
+
+    <path d="M 0 60 L 150 60 L 125 90 L 25 90 Z" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="80" text-anchor="middle" fill="#A351D4" font-size="10">Sign</text>
+
+    <rect x="25" y="110" width="100" height="25" rx="5" fill="#A351D4" opacity="0.15" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="127" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">Sig(KV)</text>
+  </g>
+
+  <!-- Verification note -->
+  <g transform="translate(200,320)">
+    <rect x="0" y="0" width="300" height="50" rx="5" fill="none" stroke="#A351D4" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="150" y="15" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">Verification:</text>
+    <text x="150" y="30" text-anchor="middle" fill="#A351D4" font-size="9">Anyone with public key 🔓 can verify</text>
+    <text x="150" y="43" text-anchor="middle" fill="#A351D4" font-size="9">signatures are authentic</text>
+  </g>
+
+  <!-- Warning -->
+  <g transform="translate(150,400)">
+    <rect x="0" y="0" width="400" height="60" rx="5" fill="#A351D4" opacity="0.05" stroke="#A351D4" stroke-width="2"/>
+    <text x="10" y="20" fill="#A351D4" font-size="12">⚠️</text>
+    <text x="30" y="20" fill="#A351D4" font-size="10" font-weight="bold">Time Agnostic Limitation:</text>
+    <text x="200" y="35" text-anchor="middle" fill="#A351D4" font-size="9">• No timestamp protection</text>
+    <text x="200" y="48" text-anchor="middle" fill="#A351D4" font-size="9">• Vulnerable to replay attacks</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-cyan-sig" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" fill="#A351D4" font-size="16" font-weight="bold">PKV-KV Creation Process</text>
+
+  <!-- PKV-KEY input (left) -->
+  <g transform="translate(100,80)">
+    <rect x="0" y="0" width="150" height="40" rx="5" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="15" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">PKV-KEY</text>
+    <text x="75" y="30" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">0xC4D2F8A9B1E7...</text>
+  </g>
+
+  <!-- PKV-VALUE input (right) -->
+  <g transform="translate(350,80)">
+    <rect x="0" y="0" width="150" height="40" rx="5" fill="#A351D4" opacity="0.1" stroke="#A351D4" stroke-width="2"/>
+    <text x="75" y="15" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">PKV-VALUE</text>
+    <text x="75" y="30" text-anchor="middle" fill="#A351D4" font-size="9" font-family="monospace">0x9A8E6D2C4B1F...</text>
+  </g>
+
+  <!-- Arrows converging -->
+  <!-- From PKV-KEY -->
+  <line x1="175" y1="120" x2="175" y2="160" stroke="#A351D4" stroke-width="1.5"/>
+  <line x1="175" y1="160" x2="280" y2="180" stroke="#A351D4" stroke-width="1.5"/>
+
+  <!-- From PKV-VALUE -->
+  <line x1="425" y1="120" x2="425" y2="160" stroke="#A351D4" stroke-width="1.5"/>
+  <line x1="425" y1="160" x2="320" y2="180" stroke="#A351D4" stroke-width="1.5"/>
+
+  <!-- Combine operation -->
+  <g transform="translate(250,180)">
+    <path d="M 0 0 L 100 0 L 50 30 Z" fill="#A351D4" opacity="0.15" stroke="#A351D4" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" fill="#A351D4" font-size="11">Combine</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="210" x2="300" y2="240" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-kv)"/>
+
+  <!-- Binary combination note -->
+  <g transform="translate(200,250)">
+    <text x="100" y="0" text-anchor="middle" fill="#A351D4" font-size="9" font-style="italic">Binary hash combination</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="260" x2="300" y2="280" stroke="#A351D4" stroke-width="1.5" marker-end="url(#arrowhead-cyan-kv)"/>
+
+  <!-- Final PKV-KV -->
+  <g transform="translate(200,280)">
+    <rect x="0" y="0" width="200" height="40" rx="5" fill="#A351D4" opacity="0.25" stroke="#A351D4" stroke-width="3"/>
+    <text x="100" y="18" text-anchor="middle" fill="#A351D4" font-size="12" font-weight="bold">PKV-KV</text>
+    <text x="100" y="32" text-anchor="middle" fill="#A351D4" font-size="10" font-family="monospace">0x5E7C3A9F2D8B...</text>
+  </g>
+
+  <!-- Purpose box -->
+  <g transform="translate(150,340)">
+    <rect x="0" y="0" width="300" height="40" rx="5" fill="#A351D4" opacity="0.05" stroke="#A351D4" stroke-width="2"/>
+    <text x="150" y="15" text-anchor="middle" fill="#A351D4" font-size="10" font-weight="bold">Purpose:</text>
+    <text x="150" y="30" text-anchor="middle" fill="#A351D4" font-size="9">Unique cryptographic identity for the key-value pair</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-cyan-kv" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#A351D4"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Arc icon with stroke and fill styling -->
+  <g transform="translate(30,100)">
+    <!-- Create thick arc band -->
+    <path d="M 0,-65
+             C 110,-60 110,60 0,65
+             L 0,55
+             C 100,50 100,-50 0,-55
+             Z"
+          fill="#CC0000"
+          stroke="#FF0000"
+          stroke-width="6"/>
+
+    <!-- Top endpoint circle -->
+    <circle cx="0" cy="-65" r="10" fill="#CC0000" stroke="#FF0000" stroke-width="6"/>
+
+    <!-- Bottom endpoint circle -->
+    <circle cx="0" cy="65" r="10" fill="#CC0000" stroke="#FF0000" stroke-width="6"/>
+  </g>
+</svg>
