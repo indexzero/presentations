@@ -10,5 +10,9 @@
   },
   "author": "Charlie Robbins <npm@charlie.dev>",
   "license": "Apache-2.0",
-  "homepage": "https://talks.charlie.dev/"
+  "homepage": "https://talks.charlie.dev/",
+  "dependencies": {
+    "puppeteer": "^24.25.0",
+    "sharp": "^0.34.4"
+  }
 }
